@@ -1,12 +1,12 @@
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 
-const Layout = ({children}) => {
+const Layout = ({children, toggleTheme, currentTheme}) => {
     return (
         <div>
-            <Navbar />
+            <Navbar toggleTheme={toggleTheme} currentTheme={currentTheme}/>
             {children}
-            <Footer />
+            <Footer currentTheme={currentTheme}/>
         </div>
     )
 }

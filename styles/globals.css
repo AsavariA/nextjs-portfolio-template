@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.navbar{
+  padding: 1.2rem 5rem;
+}

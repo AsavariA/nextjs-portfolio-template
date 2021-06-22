@@ -3,10 +3,11 @@ import { ThemeProvider } from "styled-components"
 import { useState, useEffect } from "react"
 import { lightTheme, darkTheme, GlobalStyles } from "../ThemeConfig"
 import Layout from '../Layout';
+import { ChakraProvider } from "@chakra-ui/react"
 
 function MyApp({ Component, pageProps }) {
 
-  const [theme, setTheme] = useState("dark")
+  const [theme, setTheme] = useState("light")
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
@@ -16,14 +17,17 @@ function MyApp({ Component, pageProps }) {
     theme == 'light' ? setTheme('dark') : setTheme('light')
   }
 
+  const currentTheme = theme ==='light' ? lightTheme : darkTheme
+
   return (
-    <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
-      <GlobalStyles />
-      <button onClick={toggleTheme}>Switch {theme}</button>
-      <Layout>
-        <Component {...pageProps} theme={theme} />
-      </Layout>
-    </ThemeProvider>
+    <ChakraProvider>
+      <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <Layout toggleTheme={toggleTheme} currentTheme={currentTheme}>
+          <Component {...pageProps} currentTheme={currentTheme} />
+        </Layout>
+      </ThemeProvider>
+    </ChakraProvider>
   )
 }
 
