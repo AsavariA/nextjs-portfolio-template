@@ -1,5 +1,6 @@
-import { Switch, Flex, Spacer } from "@chakra-ui/react"
+import { Switch } from "@chakra-ui/react"
 import styles from '../styles/Navbar.module.css'
+import Link from 'next/link'
 
 const Navbar = ({ toggleTheme, currentTheme }) => {
     return (
@@ -8,16 +9,16 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
                 <h2 className={styles.logo}>Asavari Ambavane</h2>
                 <div style={{ display: 'flex' }}>
                     <div className={styles.navlinks} style={{ padding: '0 1.5rem' }}>
-                        <a>Home</a>
+                        <Link href='/'><a>Home</a></Link>
                     </div>
                     <div className={styles.navlinks} style={{ padding: '0 1.5rem' }}>
-                        <a>About</a>
+                        <Link href='/about'><a>About</a></Link>
                     </div>
                     <div className={styles.navlinks} style={{ padding: '0 1.5rem' }}>
-                        <a>Work</a>
+                        <Link href='/work'><a>Work</a></Link>
                     </div>
                     <div className={styles.navlinks} style={{ padding: '0 1.5rem' }}>
-                        <a>Contact</a>
+                        <Link href='/contact'><a>Contact</a></Link>
                     </div>
                 </div>
                 <Switch id="dark-mode" colorScheme="purple" size="lg" onChange={() => toggleTheme()} />
