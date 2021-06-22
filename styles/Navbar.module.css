@@ -1,0 +1,36 @@
+.navbar{
+    padding: 0.9rem 5rem 1.3rem 5rem;
+  }
+  
+  .logo{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+  }
+
+.navlinks a{
+    opacity: 80%;
+    position: relative;
+    text-transform: uppercase;
+  } 
+
+.navlinks a:hover{
+    opacity: 100%;
+}
+
+.navlinks a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.navlinks a:hover:after {
+  width: 100%;
+  transition: 0.25s linear;
+}
