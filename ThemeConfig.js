@@ -13,7 +13,7 @@ export const darkTheme = {
   body: '#17223b',
   text: '#FAFAFA',
   secondary: '#263859',
-  tertiary: '#6b778d',
+  tertiary: '#A2AAB9',
   accent: '#ffc7c8',
   boxShadow: '0px 2px 10px -2px rgba(51, 51, 51, 0.5)'
 }
