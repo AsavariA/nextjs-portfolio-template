@@ -6,7 +6,8 @@ export const lightTheme = {
   secondary: '#d7f7f5',
   tertiary: '#75cac3',
   accent: '#ff6768',
-  boxShadow: '0px 2px 10px -2px rgba(134, 134, 134, 0.5)'
+  boxShadow: '0px 2px 10px -2px rgba(134, 134, 134, 0.5)',
+  contrastText: '#FAFAFA',
 }
 
 export const darkTheme = {
@@ -15,7 +16,8 @@ export const darkTheme = {
   secondary: '#263859',
   tertiary: '#A2AAB9',
   accent: '#ffc7c8',
-  boxShadow: '0px 2px 10px -2px rgba(51, 51, 51, 0.5)'
+  boxShadow: '0px 2px 10px -2px rgba(51, 51, 51, 0.5)',
+  contrastText: '#000',
 }
 
 export const GlobalStyles = createGlobalStyle`

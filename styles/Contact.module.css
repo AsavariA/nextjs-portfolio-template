@@ -4,6 +4,15 @@
     font-size:30px
   }
 
-.contactdiv{
-    /* padding: 1rem; */
+.submit{
+  padding: 0.5rem 2rem;
+  width: fit-content;
+  border-radius: 50px;
+  margin: auto;
+  transition: 0.2s ease-in-out;
 } 
+
+.submit:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
