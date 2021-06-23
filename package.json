@@ -13,13 +13,16 @@
     "@chakra-ui/react": "^1.6.4",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "dotenv": "^10.0.0",
     "framer-motion": "^4.1.17",
     "next": "11.0.0",
     "nodemailer": "^6.6.2",
     "react": "17.0.2",
-    "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {

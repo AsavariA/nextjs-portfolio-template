@@ -1,11 +1,12 @@
-import { Stack, Input, Textarea } from "@chakra-ui/react"
+import { Stack, Input, Textarea, useToast } from "@chakra-ui/react"
 import { useMediaQuery } from "@chakra-ui/react"
 import { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 
 const Contact = ({ currentTheme }) => {
     const [drawerVisible] = useMediaQuery("(max-width: 850px)")
-    const FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnXFxxj9KiFXRVRe1RweSbbrgouyzrQCxmdy3y7Kv5gOf3HA/formResponse'
+    const toast = useToast()
+    // const FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnXFxxj9KiFXRVRe1RweSbbrgouyzrQCxmdy3y7Kv5gOf3HA/formResponse'
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -22,6 +23,21 @@ const Contact = ({ currentTheme }) => {
           phone: phone,
           message: message
         }
+        setName('')
+        setEmail('')
+        setPhone('')
+        setMessage('')
+
+        toast({
+          description: "You reached us!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        })
+
+        // console.log(JSON.stringify(data))
+        // console.log(data)
+        
       fetch('/api/contact', {
           method: 'POST',
           headers: {
@@ -48,7 +64,7 @@ const Contact = ({ currentTheme }) => {
                 <h2 className={styles.contact}>Contact Me</h2>
             </div>
             {/* <form action={FORM_URL} method="POST"> */}
-            <form>
+            <form onSubmit={(e)=>{handleSubmit(e)}}>
                 <Stack spacing={4}>
                     <Input type="text" name="name" value={name} placeholder="Your Name" focusBorderColor={currentTheme.tertiary} isRequired onChange={(e)=>{setName(e.target.value)}} />
                     <Input type="email" name="email" value={email} placeholder="yourname@email.com" focusBorderColor={currentTheme.tertiary} isRequired onChange={(e)=>{setEmail(e.target.value)}} />
@@ -64,7 +80,7 @@ const Contact = ({ currentTheme }) => {
                     />
                     <div>
                         <div className={styles.submit} style={{ backgroundColor: currentTheme.tertiary, color: currentTheme.contrastText }}>
-                            <button type="submit" onClick={(e)=>{handleSubmit(e)}}>Submit</button>
+                            <button type="submit">Submit</button>
                         </div>
                     </div>
                 </Stack>
