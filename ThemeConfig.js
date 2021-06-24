@@ -17,7 +17,7 @@ export const darkTheme = {
   tertiary: '#A2AAB9',
   accent: '#ffc7c8',
   boxShadow: '0px 2px 10px -2px rgba(51, 51, 51, 0.5)',
-  contrastText: '#000',
+  contrastText: '#101010',
 }
 
 export const GlobalStyles = createGlobalStyle`

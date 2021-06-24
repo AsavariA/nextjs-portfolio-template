@@ -10,9 +10,56 @@
   border-radius: 50px;
   margin: auto;
   transition: 0.2s ease-in-out;
+  color: #101010;
 } 
 
 .submit:hover{
-  transform: scale(1.05);
+  transform: scale(0.9);
   cursor: pointer;
+}
+
+.socialIconDiv{
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem auto;
+}
+
+.socialIcon{
+  height: 45px;
+  width: 45px;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.socialIcon:hover{
+  transform: scale(0.9)
+}
+
+.form{
+  padding: 1rem;
+  border-radius: 20px;
+  border-width: 2px;
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 850px){
+  .socialIconDiv{
+    width: 70%;
+  }
+
+  .socialIcon{
+    height: 35px;
+    width: 35px;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  
+  .form{
+    padding: 1rem;
+    border-radius: 15px;
+    border-width: 1.5px;
+  }
 }
