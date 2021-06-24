@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Navbar.module.css'
+import styles from '../styles/NavbarFooter.module.css'
 import Link from 'next/link'
 
 const Navlinks = ({drawerVisible}) => {

@@ -96,7 +96,7 @@ const Contact = ({ currentTheme }) => {
         </Stack>
       </form>
 
-      <div style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+      <div style={{ textAlign: 'center', paddingTop: '0.5rem' }}>
         <Link href="mailto:ambavaneasavari@gmail.com"><a>ambavaneasavari@gmail.com</a></Link>
       </div>
       <div className={styles.socialIconDiv}>

@@ -1,8 +1,9 @@
+import styles from '../styles/NavbarFooter.module.css';
 
-const Footer = () => {
+const Footer = ({currentTheme}) => {
     return (
-        <div>
-            <h2>Footer</h2>
+        <div className={styles.footermain} style={{backgroundColor: currentTheme.footerColor}}>
+            <h2>Asavari Ambavane | Copyright © 2021</h2>
         </div>
     )
 }

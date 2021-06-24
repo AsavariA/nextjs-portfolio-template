@@ -29,3 +29,9 @@
   width: 100%;
   transition: 0.25s linear;
 }
+
+.footermain{
+  padding: 2rem;
+  text-align: center;
+  color: grey;
+}

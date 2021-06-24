@@ -1,5 +1,5 @@
 import { Switch } from "@chakra-ui/react"
-import styles from '../styles/Navbar.module.css'
+import styles from '../styles/NavbarFooter.module.css'
 import Navlinks from './Navlinks'
 import { useMediaQuery } from "@chakra-ui/react"
 
