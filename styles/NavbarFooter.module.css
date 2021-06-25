@@ -3,6 +3,10 @@
     font-size: 30px;
   }
 
+  .navbar{
+    z-index: 5000;
+  }
+
   .navlinks {
     padding: 0 1.5rem;
     font-size: 15px;

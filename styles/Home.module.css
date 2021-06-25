@@ -49,7 +49,47 @@
   transform: translateY(-5px);
 }
 
+.cta2{
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.projectmain{
+  width: 45%;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  border: 3px dashed;
+}
+
+.projectIcon{
+  height: 60px;
+  width: 60px;
+  padding: 1rem;
+  border-radius:50%;
+  margin-bottom: 1rem;
+  border: 4px solid;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.projectContent{
+  transform: translateY(-2.1rem)
+}
+
+.projectTitle{
+  font-size: 18px;
+}
+
+.projectSubTitle{
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 850px){
+  .projectmain{
+    width: 70%;
+  }
+
   .homeheading{
     padding: 0 15vw;
   }
@@ -76,5 +116,23 @@
     padding: 0.3rem 1.7rem;
     margin-top: 1rem;
     font-size: 15px;
+  }
+  .projectmain{
+    width: 80%;
+    padding: 0 1rem;
+    margin: 3rem auto;
+  }
+  .projectIcon{
+    height: 50px;
+    width: 50px;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    border: 3px solid white;
+  }
+  .projectContent{
+    transform: translateY(-1.8rem)
+  }
+  .projectSubTitle{
+    margin-bottom: 0.5rem;
   }
 }
