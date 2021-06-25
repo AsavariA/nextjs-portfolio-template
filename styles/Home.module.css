@@ -36,6 +36,19 @@
   font-size: 19px;
 }
 
+.cta1{
+  padding: 0.5rem 2.5rem;
+  margin-top: 2rem;
+  position: relative;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out;
+  font-size: 19px;
+}
+
+.cta1:hover{
+  transform: translateY(-5px);
+}
+
 @media only screen and (max-width: 850px){
   .homeheading{
     padding: 0 15vw;
@@ -57,6 +70,11 @@
     font-size: 22px;
   }
   .subheading{
+    font-size: 15px;
+  }
+  .cta1{
+    padding: 0.3rem 1.7rem;
+    margin-top: 1rem;
     font-size: 15px;
   }
 }

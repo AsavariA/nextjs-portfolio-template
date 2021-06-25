@@ -9,7 +9,7 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
     return (
         <div className={styles.navbar} style={{ backgroundColor: currentTheme.secondary, boxShadow: currentTheme.boxShadow, padding: !drawerVisible ? '0.9rem 5rem 1.3rem 5rem' : '0.5rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'baseline', marginBottom: !drawerVisible ? '0' : '10px' }}>
-                <h2 className={styles.logo} style={{ fontSize: !drawerVisible ? '30px' : '20px' }}>Asavari Ambavane</h2>
+                <h2 className={styles.logo}>Asavari Ambavane</h2>
                 {!drawerVisible
                     ? <div style={{ display: 'flex' }}>
                         <Navlinks />
@@ -22,7 +22,7 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
                     ? <>
                     <hr></hr>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '10px' }}>
-                        <Navlinks drawerVisible={drawerVisible}/>
+                        <Navlinks/>
                     </div>
                     </>
                     : null

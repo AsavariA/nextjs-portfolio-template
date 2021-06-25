@@ -73,7 +73,7 @@ const Contact = ({ currentTheme }) => {
         <h2 className={styles.contact}>Contact Me</h2>
       </div>
       {/* <form action={FORM_URL} method="POST"> */}
-      <form onSubmit={(e) => { handleSubmit(e) }} className={styles.form} style={{ borderColor: currentTheme.text, backgroundColor: currentTheme.text === '#363537' ? '#fafafa' : 'transparent' }}>
+      <form onSubmit={(e) => { handleSubmit(e) }} className={styles.form} style={{ borderColor: currentTheme.text, backgroundColor: currentTheme.name === 'light' ? '#fafafa' : 'transparent' }}>
         <Stack spacing={4}>
           <Input type="text" name="name" value={name} placeholder="Your Name" focusBorderColor={currentTheme.tertiary} isRequired autoComplete="off" onChange={(e) => { setName(e.target.value) }} />
           <Input type="email" name="email" value={email} placeholder="yourname@email.com" focusBorderColor={currentTheme.tertiary} autoComplete="off" isRequired onChange={(e) => { setEmail(e.target.value) }} />
