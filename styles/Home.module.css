@@ -1,3 +1,62 @@
-.colordiv{
-  height: 100px;
+.homeheading{
+  height: 80vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25vw;
+}
+
+.homeheading::before{
+  content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('zbynek-burival-8iZG31eXkks-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    opacity: 0.3;
+}
+
+.heading{
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin: 0 1rem;
+}
+
+.subheading{
+  position: relative;
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 850px){
+  .homeheading{
+    padding: 0 15vw;
+  }
+  .heading{
+    font-size: 35px;
+  }
+  .subheading{
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 535px){
+  .homeheading{
+    height: 70vh;
+    padding: 0 10vw;
+  }
+  .heading{
+    font-size: 22px;
+  }
+  .subheading{
+    font-size: 15px;
+  }
 }
