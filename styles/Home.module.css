@@ -70,6 +70,10 @@
   border: 4px solid;
   margin-left: auto;
   cursor: pointer;
+  /* background-image: url('Untitled\ design.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%; */
 }
 
 .projectContent{

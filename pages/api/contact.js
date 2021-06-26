@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default function (req, res) {
-  require('dotenv').config()
-  
+  require('dotenv').config({ path: `${__dirname}/../../Collections/.env` })
+
   let nodemailer = require('nodemailer')
   const transporter = nodemailer.createTransport({
     port: 465,
