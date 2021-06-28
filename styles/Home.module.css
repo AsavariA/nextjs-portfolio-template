@@ -1,5 +1,5 @@
 .homeheading{
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   text-align: center;
   position: relative;
@@ -89,6 +89,55 @@
   margin-bottom: 1rem;
 }
 
+.workheading{
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.homeWorkSection{
+  padding: 2rem;
+}
+
+.homeSkillSection{
+  padding: 4rem 2rem;
+}
+
+.cta3{
+  padding: 0.4rem 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  font-size: 16px;
+}
+
+.cta3:hover{
+  transform: translateY(-5px);
+}
+
+.skills{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem 0;
+}
+
+.line{
+  width: 2px;
+  height: auto;
+}
+
+.skillList{
+  padding: 1rem 0;
+}
+
+.skillHeading{
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 @media only screen and (max-width: 850px){
   .projectmain{
     width: 70%;
@@ -102,6 +151,23 @@
   }
   .subheading{
     font-size: 17px;
+  }
+  .workheading{
+    font-size: 45px;
+  }
+  .skills{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  .line{
+    width: 100%;
+    height: 2px;
+    margin: 1rem 0;
+  }
+  .skillList{
+    padding: 1rem 3rem;
   }
 }
 
@@ -138,5 +204,15 @@
   }
   .projectSubTitle{
     margin-bottom: 0.5rem;
+  }
+  .workheading{
+    font-size: 40px;
+  }
+  .homeWorkSection{
+    padding: 1rem;
+  }
+
+  .homeSkillSection{
+    padding: 2rem 1rem;
   }
 }
