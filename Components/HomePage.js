@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import HomeProject from './HomeProject'
+import Skills from './Skills'
 import { projects } from '../Collections/projects'
 
 const HomePage = ({ currentTheme }) => {
@@ -22,32 +23,14 @@ const HomePage = ({ currentTheme }) => {
                         )
                     })
                 }
-                <div style={{textAlign: 'center', paddingBottom: '2rem'}}><Link href="/work"><a className={styles.cta3} style={{ backgroundColor: currentTheme.accent, color: currentTheme.contrastText, boxShadow: currentTheme.boxShadow}}>View All <span>&gt;</span></a></Link></div>
+                <div style={{ textAlign: 'center', paddingBottom: '2rem' }}><Link href="/work"><a className={styles.cta3} style={{ backgroundColor: currentTheme.accent, color: currentTheme.contrastText, boxShadow: currentTheme.boxShadow }}>View All <span>&gt;</span></a></Link></div>
             </div>
-            <div id="skills" className={styles.homeSkillSection} style={{backgroundColor: currentTheme.secondary}}>
-                <h1 className={styles.workheading}>Capabilities</h1>
-                <div className={styles.skills} style={{color: currentTheme.subtext}}>
-                    <ul className={styles.skillList}>  
-                        <h1 className={styles.skillHeading} style={{color: currentTheme.text}}>Frontend</h1>
-                        <h2>HTML5, CSS3, JS</h2>
-                        <h2>React JS</h2>
-                        <h2>Next JS</h2>
-                    </ul>
-                    <div className={styles.line} style={{backgroundColor: currentTheme.subtext}}></div>
-                    <ul className={styles.skillList}>
-                        <h1 className={styles.skillHeading} style={{color: currentTheme.text}}>Backend</h1>
-                        <h2>Node JS</h2>
-                        <h2>Express JS</h2>
-                        <h2>Python</h2>
-                    </ul>
-                    <div className={styles.line} style={{backgroundColor: currentTheme.subtext}}></div>
-                    <ul className={styles.skillList}>
-                        <h1 className={styles.skillHeading} style={{color: currentTheme.text}}>Database</h1>
-                        <h2>Firebase</h2>
-                        <h2>MongoDB</h2>
-                    </ul>
-                </div>
-                <div style={{textAlign: 'center', padding: '1rem 0'}}><Link href="/contact"><a className={styles.cta3} style={{ background: 'transparent', border: `2px solid ${currentTheme.accent}`}}>Get in touch <span>&gt;</span></a></Link></div>
+            <div id="skills" className={styles.homeSkillSection} style={{ backgroundColor: currentTheme.secondary }}>
+                <Skills currentTheme={currentTheme} />
+            </div>
+            <div id="about" className={styles.homeAboutSection} style={{ backgroundColor: currentTheme.secondary }}>
+                <h1 className={styles.workheading}>About Me</h1>
+                <p className={styles.aboutText} style={{ color: currentTheme.subtext }}>I am Asavari, a student at VJTI, Mumbai. I am currently pursuing my bachelor<span>&#39;</span>s degree in electronic engineering. I aim to gain maximum technical knowledge during the course of my eduction and hopefully apply the same for the benefit of the society in future. Other than that, you are most likely to find me with a book in one hand and tea in other. I also like to groove to upbeat music whenever I feel happy!</p>
             </div>
         </div>
     )

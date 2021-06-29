@@ -138,6 +138,38 @@
   letter-spacing: 1px;
 }
 
+.homeAboutSection{
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10vw;
+}
+
+.homeAboutSection::before{
+  content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('dark_about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    opacity: 0.3;
+}
+
+.aboutText{
+  text-align: left;
+  width: 40%;
+  margin-top: 1rem;
+}
+
 @media only screen and (max-width: 850px){
   .projectmain{
     width: 70%;
@@ -168,6 +200,10 @@
   }
   .skillList{
     padding: 1rem 3rem;
+  }
+  .aboutText{
+    text-align: left;
+    width: 70%;
   }
 }
 
@@ -211,7 +247,13 @@
   .homeWorkSection{
     padding: 1rem;
   }
-
+  .homeAboutSection{
+    height: 80vh;
+  }
+  .aboutText{
+    text-align: left;
+    width: 100%;
+  }
   .homeSkillSection{
     padding: 2rem 1rem;
   }
