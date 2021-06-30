@@ -1,0 +1,15 @@
+.workHeading{
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size:50px;
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 850px){}
+
+@media only screen and (max-width: 500px){
+    .workHeading{
+        font-size:35px;
+        padding: 1rem;
+    } 
+}

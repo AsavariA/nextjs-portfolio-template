@@ -1,7 +1,7 @@
 .contact{
     font-family: 'Playfair Display', serif;
     text-align: center;
-    font-size:30px
+    font-size:50px
   }
 
 .submit{
@@ -61,5 +61,11 @@
     padding: 1rem;
     border-radius: 15px;
     border-width: 1.5px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .contact{
+    font-size:40px
   }
 }

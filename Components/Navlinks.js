@@ -10,7 +10,7 @@ const Navlinks = () => {
                 <Link href='/'><a>Home</a></Link>
             </div>
             <div className={styles.navlinks}>
-                <Link href='/about'><a>About</a></Link>
+                <Link href='/#about'><a>About</a></Link>
             </div>
             <div className={styles.navlinks}>
                 <Link href='/work'><a>Work</a></Link>

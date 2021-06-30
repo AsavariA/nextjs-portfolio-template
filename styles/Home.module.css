@@ -168,6 +168,7 @@
   text-align: left;
   width: 40%;
   margin-top: 1rem;
+  position: relative;
 }
 
 @media only screen and (max-width: 850px){
@@ -204,6 +205,7 @@
   .aboutText{
     text-align: left;
     width: 70%;
+    position: static;
   }
 }
 
