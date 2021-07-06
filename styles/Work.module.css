@@ -5,6 +5,76 @@
     padding: 2rem;
 }
 
+.parentcard{
+    padding: 1rem;
+    width:fit-content;
+}
+
+.imageandsocials{
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    height: 35vh;
+    width: 60vh;
+    background-color: pink;
+    border: 2px solid black;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    margin: 0.5rem 0;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.cardtitle{
+    display: flex;
+    justify-content: space-between;
+    width: 60vh;
+}
+
+.cardbottom{
+    display: flex;
+    width: 60vh;
+    align-items: center;
+}
+
+.socialIcon{
+    border: 2px solid black;
+    padding: 0.4rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 1rem 0 1rem 1rem;
+}
+
+.projtitle{
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.projdescription{
+    width: 50%;
+    font-size: 14px;
+}
+
+.cta{
+    padding: 0.3rem 2rem;
+    border-radius: 50px;
+    border: 1px solid red;
+    margin-left: 0.5rem;
+    color: red;
+    font-size: 14px;
+}
+
 @media only screen and (max-width: 850px){}
 
 @media only screen and (max-width: 500px){
