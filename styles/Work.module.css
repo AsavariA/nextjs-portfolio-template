@@ -5,6 +5,14 @@
     padding: 2rem;
 }
 
+.workmain{
+  padding: 0 20vw;
+}
+
+.parentofparentcard{
+  display: flex;
+}
+
 .parentcard{
     padding: 1rem;
     width:fit-content;
@@ -16,9 +24,12 @@
 }
 
 .card{
-    height: 35vh;
-    width: 60vh;
+    height: 35vmin;
+    width: 60vmin;
     background-color: pink;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
     border: 2px solid black;
     padding: 0.5rem;
     display: flex;
@@ -37,12 +48,12 @@
 .cardtitle{
     display: flex;
     justify-content: space-between;
-    width: 60vh;
+    width: 60vmin;
 }
 
 .cardbottom{
     display: flex;
-    width: 60vh;
+    width: 60vmin;
     align-items: center;
 }
 
@@ -52,17 +63,17 @@
     height: 2.5rem;
     width: 2.5rem;
     margin: 1rem 0 1rem 1rem;
+    cursor: pointer;
 }
 
 .projtitle{
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .projdescription{
-    width: 50%;
     font-size: 14px;
 }
 
@@ -75,11 +86,44 @@
     font-size: 14px;
 }
 
-@media only screen and (max-width: 850px){}
+@media only screen and (max-width: 850px){
+  .parentofparentcard{
+    display: block;
+  }
+  .parentcard{
+      margin: 2rem auto;
+  }
+  .workmain{
+    padding: 0 10vw;
+  }
+}
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
+  .workmain{
+    padding: 0;
+  }
+
     .workHeading{
         font-size:35px;
         padding: 1rem;
-    } 
+    }
+    .projtitle{
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+    }
+    .cardtitle{
+        display: block;
+    }
+    .card{
+        height: 45vmin;
+        width: 70vmin;
+    }
+    .projdescription{
+        font-size: 12px;
+    }
+    .socialIcon{
+        padding: 0.3rem;
+        height: 2rem;
+        width: 2rem;
+    }
 }
