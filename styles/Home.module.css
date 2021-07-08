@@ -211,7 +211,6 @@
 
 @media only screen and (max-width: 535px){
   .homeheading{
-    height: 70vh;
     padding: 0 10vw;
   }
   .heading{

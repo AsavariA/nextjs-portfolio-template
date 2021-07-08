@@ -90,7 +90,7 @@
     display: block;
   }
   .parentcard{
-      margin: 2rem auto;
+      margin: 0 auto 3rem auto ;
   }
   .workmain{
     padding: 0 10vw;
@@ -105,6 +105,7 @@
     .workHeading{
         font-size:35px;
         padding: 1rem;
+        margin: 1rem auto;
     }
     .projtitle{
         font-size: 20px;
@@ -118,7 +119,7 @@
         width: 70vmin;
     }
     .projdescription{
-        font-size: 12px;
+        font-size: 10px;
     }
     .socialIcon{
         padding: 0.3rem;
