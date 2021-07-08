@@ -40,4 +40,50 @@ a {
   background: rgb(143, 143, 143);
 }
 
+.project1_1{
+  background-image: url('projects/INZA_1.jpg');
+}
+.project1_2{
+  background-image: url('projects/INZA_2.jpg');
+}
+.project1_3{
+  background-image: url('projects/INZA_3.jpg');
+}
+.project2_1{
+  background-image: url('projects/BIZ_1.jpg');
+}
+.project2_2{
+  background-image: url('projects/BIZ_2.jpg');
+}
+.project2_3{
+  background-image: url('projects/BIZ_3.jpg');
+}
+.project3_1{
+  background-image: url('projects/AHORA_1.jpg');
+}
+.project3_2{
+  background-image: url('projects/AHORA_2.jpg');
+}
+.project3_3{
+  background-image: url('projects/AHORA_3.jpg');
+}
+.project5_1{
+  background-image: url('projects/NPM1.jpg');
+}
+.project5_2{
+  background-image: url('projects/NPM2.gif');
+}
+.project5_3{
+  background-image: url('projects/NPM3.gif');
+}
+.project6_1{
+  background-image: url('projects/TALK_1.jpg');
+}
+.project6_2{
+  background-image: url('projects/TALK_2.jpg');
+}
+.project6_3{
+  background-image: url('projects/TALK_3.jpg');
+}
+
 
