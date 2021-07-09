@@ -85,6 +85,37 @@
     font-size: 14px;
 }
 
+.carouselItem {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgb(237, 237, 238);
+  }
+
+  .carousel {
+    overflow: hidden;
+    background-color: rgb(237, 237, 238);
+  }
+  
+  .inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }  
+
+  .indicators {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .indicators > button {
+    margin: 5px;
+  }
+
+  .indicators > button.active {
+    color: rgb(202, 42, 42);
+  }
+
 @media only screen and (max-width: 850px){
   .parentofparentcard{
     display: block;
