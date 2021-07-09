@@ -54,7 +54,7 @@ const WorkProject = ({ currentTheme, project }) => {
   });
 
   return (
-    <div className={styles.parentofparentcard} style={{ justifyContent: project.justifyContent }}>
+    <div className={styles.parentofparentcard} style={{ justifyContent: project.justifyContent }} id={project.id}>
       <div className={styles.parentcard}>
         <div className={styles.cardtitle}>
           <h1 className={styles.projtitle}>{project.name}</h1>

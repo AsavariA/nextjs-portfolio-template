@@ -5,10 +5,12 @@ import styles from '../styles/Work.module.css'
 
 const BlogCard = ({ blog, currentTheme }) => {
 
+    const replaceImage = 'https://cdn-images-1.medium.com/max/751/1*diOuVBBLhi2TUFZv9qT5XQ.png'
+
     return (
         <div style={{ whiteSpace: 'initial' }}>
             <Box maxW="sm" borderWidth="2px" borderRadius="lg" overflow="hidden" bg={currentTheme.secondary}>
-                <Image src={blog.thumbnail} alt='asach kahitari' height='300' width='500' />
+                <Image src={blog.thumbnail === replaceImage ? 'https://miro.medium.com/max/963/1*OTbzRC3E8bFNPd_gNzM8lA.jpeg' : blog.thumbnail} alt='thumbnail image' height='300' width='500' />
                 <Box p="6">
                     <HStack spacing={2}>
                         {

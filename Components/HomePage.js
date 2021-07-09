@@ -3,6 +3,8 @@ import Link from 'next/link'
 import HomeProject from './HomeProject'
 import Skills from './Skills'
 import { projects } from '../Collections/projects'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons"
 
 const HomePage = ({ currentTheme }) => {
     return (
@@ -31,6 +33,9 @@ const HomePage = ({ currentTheme }) => {
             <div id="about" className={styles.homeAboutSection} style={{ backgroundColor: currentTheme.secondary }}>
                 <h1 className={styles.workheading}>About Me</h1>
                 <p className={styles.aboutText} style={{ color: currentTheme.subtext }}>I am Asavari, a student at VJTI, Mumbai. I am currently pursuing my bachelor<span>&#39;</span>s degree in electronic engineering. I aim to gain maximum technical knowledge during the course of my eduction and hopefully apply the same for the benefit of the society in future. Other than that, you are most likely to find me with a book in one hand and tea in other. I also like to groove to upbeat music whenever I feel happy!</p>
+                <div style={{ textAlign: 'center', padding: '1rem 0', margin: '1rem 0', position: 'relative', display: 'flex', color: currentTheme.subtext }}>
+                    <Link href="/contact"><a className={styles.cta4} style={{ background: 'transparent', border: `2px solid ${currentTheme.subtext}`, display: 'flex' }}>Resume&nbsp;&nbsp;&nbsp;&nbsp;<FontAwesomeIcon width="20px" height="20px" icon={faDownload} /></a></Link>
+                </div>
             </div>
         </div>
     )
