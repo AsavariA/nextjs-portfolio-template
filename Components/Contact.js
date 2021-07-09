@@ -68,7 +68,7 @@ const Contact = ({ currentTheme }) => {
   }
 
   return (
-    <div style={{ width: !drawerVisible ? '40%' : '80%', margin: !drawerVisible ? '1rem auto' : '0.5rem auto', padding: !drawerVisible ? '1rem' : '0.5rem' }}>
+    <div style={{ width: !drawerVisible ? '40%' : '80%', margin: !drawerVisible ? '0 auto' : '0 auto', padding: !drawerVisible ? '2rem' : '1rem 0.5rem' }}>
       <div style={{ padding: !drawerVisible ? '1rem' : '0.5rem' }}>
         <h2 className={styles.contact}>Contact Me</h2>
       </div>

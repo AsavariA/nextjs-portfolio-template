@@ -10,6 +10,10 @@ function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
+    setTheme(localStorage.getItem('theme'));
+  }, [])
+
+  useEffect(() => {
     localStorage.setItem('theme', theme);
   }, [theme])
 
