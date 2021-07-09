@@ -1,19 +1,21 @@
 import { Box, TagLabel, Tag, HStack } from "@chakra-ui/react"
 import Image from 'next/image'
+import Link from 'next/link'
+import styles from '../styles/Work.module.css'
 
 const BlogCard = ({ blog, currentTheme }) => {
 
     return (
-        <div style={{whiteSpace: 'initial'}}>
-            <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <div style={{ whiteSpace: 'initial' }}>
+            <Box maxW="sm" borderWidth="2px" borderRadius="lg" overflow="hidden" bg={currentTheme.secondary}>
                 <Image src={blog.thumbnail} alt='asach kahitari' height='300' width='500' />
                 <Box p="6">
                     <HStack spacing={2}>
                         {
-                            blog.categories.slice(0,3).map((category, key) => {
+                            blog.categories.slice(0, 3).map((category, key) => {
                                 return (
                                     <div key={key}>
-                                        <Tag size="sm" borderRadius="md" variant="subtle" colorScheme={currentTheme.name === 'light' ? "cyan" : "purple"}>
+                                        <Tag size="sm" borderRadius="md" variant="outline" colorScheme="blue">
                                             <TagLabel>{category}</TagLabel>
                                         </Tag>
                                     </div>
@@ -28,9 +30,14 @@ const BlogCard = ({ blog, currentTheme }) => {
                     >
                         {blog.title}
                     </Box>
-                    <Box as="span" color="gray.600" fontSize="sm">
+                    <Box as="span" color={currentTheme.subtext} fontSize="sm">
                         {blog.description.replace(/(<([^>]+)>)/ig, '').slice(0, 85) + ' . . .'}
                     </Box>
+                    <div style={{marginTop: '1rem'}}>
+                        <Box>
+                            <Link href={blog.link}><a className={styles.cta2} style={{ color: '#3182ce' }}>View More</a></Link>
+                        </Box>
+                    </div>
                 </Box>
             </Box>
         </div>

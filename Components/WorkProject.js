@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { HStack, Tag, TagLabel, Tooltip } from "@chakra-ui/react"
 import { useToast } from "@chakra-ui/react"
 import { useState } from 'react';
+import { useSwipeable } from "react-swipeable";
 
 const WorkProject = ({ currentTheme, project }) => {
   const toast = useToast()
@@ -47,6 +48,11 @@ const WorkProject = ({ currentTheme, project }) => {
     }
   }
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => ahead(),
+    onSwipedRight: () => back()
+  });
+
   return (
     <div className={styles.parentofparentcard} style={{ justifyContent: project.justifyContent }}>
       <div className={styles.parentcard}>
@@ -66,7 +72,7 @@ const WorkProject = ({ currentTheme, project }) => {
             }
           </HStack>
         </div>
-        <div className={styles.imageandsocials}>
+        <div className={styles.imageandsocials} {...handlers}>
           <div className={`${styles.card} ${classname}`} style={{ borderColor: currentTheme.footerColor }}>
             <div className={styles.arrows} style={{ color: 'lightgray' }}>
               <p onClick={back}>&lt;</p>

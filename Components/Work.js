@@ -30,24 +30,18 @@ const Work = ({ currentTheme }) => {
                     })
                 }
             </div>
-            {/* {blogList ?
-                blogList.map((blog, key) => {
-                    return (
-                        <div key={key}>
-                            <BlogCard blog={blog} currentTheme={currentTheme} />
-                        </div>
-                    )
-                }) : <div>Loading...</div>
-            } */}
-            <Carousel>
-                {blogList.map((blog, key) => {
-                    return (
-                        <CarouselItem key={key}>
+            {
+                blogList ? <Carousel currentTheme={currentTheme}>
+                    {blogList.map((blog, key) => {
+                        return (
+                            <CarouselItem key={key} currentTheme={currentTheme}>
                                 <BlogCard blog={blog} currentTheme={currentTheme} />
-                        </CarouselItem>
-                    )
-                })}
-            </Carousel>
+                            </CarouselItem>
+                        )
+                    })}
+                </Carousel> : <p>Loading...</p>
+            }
+
         </div>
     )
 }

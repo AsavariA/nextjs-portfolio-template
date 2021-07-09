@@ -5,6 +5,14 @@
     padding: 2rem;
 }
 
+.blogHeading{
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size:50px;
+    padding: 1rem;
+}
+
+
 .workmain{
   padding: 0 20vw;
 }
@@ -90,12 +98,12 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: rgb(237, 237, 238);
   }
 
   .carousel {
+    padding: 2rem 0;
+    margin-top: 2rem;
     overflow: hidden;
-    background-color: rgb(237, 237, 238);
   }
   
   .inner {
@@ -104,8 +112,10 @@
   }  
 
   .indicators {
+    font-size: 30px;
     display: flex;
     justify-content: center;
+    padding: 1rem 0;
   }
   
   .indicators > button {
@@ -113,7 +123,11 @@
   }
 
   .indicators > button.active {
-    color: rgb(202, 42, 42);
+    color: #ED2639;
+  }
+  .cta2{
+    font-size: 14px;
+    text-decoration: underline;
   }
 
 @media only screen and (max-width: 850px){
@@ -133,11 +147,26 @@
     padding: 0;
   }
 
+  .indicators {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .carouselItem {
+    padding: 1rem 2rem;
+  }
+
     .workHeading{
         font-size:35px;
         padding: 1rem;
         margin: 1rem auto;
     }
+
+    .blogHeading{
+        font-size:35px;
+        padding: 1rem;
+    }
+
     .projtitle{
         font-size: 20px;
         margin-bottom: 0.5rem;
