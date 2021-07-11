@@ -23,25 +23,26 @@ const Work = ({ currentTheme }) => {
                 {
                     projects.map((project) => {
                         return (
-                            <div key={project.id}>
+                            <div key={project.id} data-aos="flip-up">
                                 <WorkProject currentTheme={currentTheme} project={project} />
                             </div>
                         )
                     })
                 }
             </div>
-            {
-                blogList ? <Carousel currentTheme={currentTheme}>
-                    {blogList.map((blog, key) => {
-                        return (
-                            <CarouselItem key={key} currentTheme={currentTheme}>
-                                <BlogCard blog={blog} currentTheme={currentTheme} />
-                            </CarouselItem>
-                        )
-                    })}
-                </Carousel> : <p>Loading...</p>
-            }
-
+            <div style={{ backgroundColor: currentTheme.secondary }}>
+                {
+                    blogList ? <Carousel currentTheme={currentTheme}>
+                        {blogList.map((blog, key) => {
+                            return (
+                                <CarouselItem key={key} currentTheme={currentTheme}>
+                                    <BlogCard blog={blog} currentTheme={currentTheme} />
+                                </CarouselItem>
+                            )
+                        })}
+                    </Carousel> : <p>Loading...</p>
+                }
+            </div>
         </div>
     )
 }

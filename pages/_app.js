@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import { lightTheme, darkTheme, GlobalStyles } from "../ThemeConfig"
 import Layout from '../Layout';
 import { ChakraProvider } from "@chakra-ui/react"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }) {
 
@@ -17,11 +19,17 @@ function MyApp({ Component, pageProps }) {
     localStorage.setItem('theme', theme);
   }, [theme])
 
+  useEffect(() => {
+    AOS.init({
+      duration: 500
+    });
+  }, []);
+
   const toggleTheme = () => {
     theme == 'light' ? setTheme('dark') : setTheme('light')
   }
 
-  const currentTheme = theme ==='light' ? lightTheme : darkTheme
+  const currentTheme = theme === 'light' ? lightTheme : darkTheme
 
   return (
     <ChakraProvider>

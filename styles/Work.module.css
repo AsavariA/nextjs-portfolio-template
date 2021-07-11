@@ -135,7 +135,7 @@
     display: block;
   }
   .parentcard{
-      margin: 0 auto 3rem auto ;
+      margin: 0 auto 2rem auto ;
   }
   .workmain{
     padding: 0 10vw;
@@ -177,8 +177,12 @@
         height: 45vmin;
         width: 70vmin;
     }
+    .cardbottom{
+      width: 70vmin;
+  }
     .projdescription{
-        font-size: 10px;
+        font-size: 12px;
+        width: 70vmin;
     }
     .socialIcon{
         padding: 0.3rem;

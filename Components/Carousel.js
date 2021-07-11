@@ -53,7 +53,7 @@ const Carousel = ({ children, currentTheme }) => {
       });
 
     return (
-        <div {...handlers} className={styles.carousel} id="blogs" style={{ backgroundColor: currentTheme.secondary }}>
+        <div {...handlers} className={styles.carousel} id="blogs" style={{ backgroundColor: currentTheme.secondary }} data-aos="fade-up">
             <div className={styles.blogHeading}>I write on Medium</div>
             <div className={styles.inner} style={{ transform: `translateX(-${activeIndex * 100}%)`}} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
                 {React.Children.map(children, (child, index) => {

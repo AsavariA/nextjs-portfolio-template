@@ -1,3 +1,11 @@
+.contactFullDiv{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh
+}
+
 .contact{
     font-family: 'Playfair Display', serif;
     text-align: center;

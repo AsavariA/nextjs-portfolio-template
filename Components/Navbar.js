@@ -2,7 +2,8 @@ import { Switch } from "@chakra-ui/react"
 import styles from '../styles/NavbarFooter.module.css'
 import Navlinks from './Navlinks'
 import { useMediaQuery } from "@chakra-ui/react"
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 const Navbar = ({ toggleTheme, currentTheme }) => {
     const [drawerVisible] = useMediaQuery("(max-width: 950px)")
@@ -25,24 +26,24 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
     return (
         <div className={styles.navbar} style={{ backgroundColor: currentTheme.secondary, boxShadow: currentTheme.boxShadow, padding: !drawerVisible ? '0.9rem 5rem 1.3rem 5rem' : '0.5rem', position: sticky ? 'fixed' : 'static' }}>
             <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'baseline', marginBottom: !drawerVisible ? '0' : '10px' }}>
-                <h2 className={styles.logo}>Asavari Ambavane</h2>
+                <Link href='/'><a><h2 className={styles.logo}>Asavari Ambavane</h2></a></Link>
                 {!drawerVisible
                     ? <div style={{ display: 'flex' }}>
                         <Navlinks />
                     </div>
                     : null
                 }
-                <Switch id="dark-mode" colorScheme="purple" size={!drawerVisible ? 'lg' : 'md'} isChecked={currentTheme.name==='dark' ? true : false} onChange={() => toggleTheme()} />
+                <Switch id="dark-mode" colorScheme="purple" size={!drawerVisible ? 'lg' : 'md'} isChecked={currentTheme.name === 'dark' ? true : false} onChange={() => toggleTheme()} />
             </div>
             {drawerVisible
-                    ? <>
+                ? <>
                     <hr></hr>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '10px' }}>
-                        <Navlinks/>
+                        <Navlinks />
                     </div>
-                    </>
-                    : null
-                }
+                </>
+                : null
+            }
         </div>
     )
 }

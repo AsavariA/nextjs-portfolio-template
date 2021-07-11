@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-/Collections
+/Collections/.env
 
 # debug
 npm-debug.log*

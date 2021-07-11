@@ -17,6 +17,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "aos": "^2.3.4",
     "dotenv": "^10.0.0",
     "framer-motion": "^4.1.17",
     "next": "11.0.0",
