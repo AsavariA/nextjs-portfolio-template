@@ -1,16 +1,14 @@
 import styles from '../styles/Work.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubAlt, faLinkedinIn, faTelegramPlane } from "@fortawesome/free-brands-svg-icons"
+import { faGithubAlt, faTelegramPlane } from "@fortawesome/free-brands-svg-icons"
 import Link from 'next/link'
 import { HStack, Tag, TagLabel, Tooltip } from "@chakra-ui/react"
 import { useToast } from "@chakra-ui/react"
 import { useState } from 'react';
-import { useSwipeable } from "react-swipeable";
+import Image from 'next/image';
 
 const WorkProject = ({ currentTheme, project }) => {
   const toast = useToast()
-  const [index, setIndex] = useState(1)
-  const [classname, setClassname] = useState('project' + project.id + '_' + index)
 
   const showGitToast = () => {
     toast({
@@ -28,30 +26,30 @@ const WorkProject = ({ currentTheme, project }) => {
     })
   }
 
-  const ahead = () => {
-    if (index === 3) {
-      setIndex(1)
-      setClassname('project' + project.id + '_' + index)
-    } else {
-      setIndex(index + 1)
-      setClassname('project' + project.id + '_' + index)
-    }
-  }
+  // const ahead = () => {
+  //   if (index === 3) {
+  //     setIndex(1)
+  //     setClassname('project' + project.id + '_' + index)
+  //   } else {
+  //     setIndex(index + 1)
+  //     setClassname('project' + project.id + '_' + index)
+  //   }
+  // }
 
-  const back = () => {
-    if (index === 1) {
-      setIndex(3)
-      setClassname('project' + project.id + '_' + index)
-    } else {
-      setIndex(index - 1)
-      setClassname('project' + project.id + '_' + index)
-    }
-  }
+  // const back = () => {
+  //   if (index === 1) {
+  //     setIndex(3)
+  //     setClassname('project' + project.id + '_' + index)
+  //   } else {
+  //     setIndex(index - 1)
+  //     setClassname('project' + project.id + '_' + index)
+  //   }
+  // }
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () => ahead(),
-    onSwipedRight: () => back()
-  });
+  // const handlers = useSwipeable({
+  //   onSwipedLeft: () => ahead(),
+  //   onSwipedRight: () => back()
+  // });
 
   return (
     <div className={styles.parentofparentcard} style={{ justifyContent: project.justifyContent }} id={project.id}>
@@ -72,12 +70,9 @@ const WorkProject = ({ currentTheme, project }) => {
             }
           </HStack>
         </div>
-        <div className={styles.imageandsocials} {...handlers}>
-          <div className={`${styles.card} ${classname}`} style={{ borderColor: currentTheme.footerColor }}>
-            <div className={styles.arrows} style={{ color: 'lightgray' }}>
-              <p onClick={back}>&lt;</p>
-              <p onClick={ahead}>&gt;</p>
-            </div>
+        <div className={styles.imageandsocials}>
+          <div className={styles.card} style={{ borderColor: currentTheme.footerColor }}>
+            <Image src={project.photo} alt='thumbnail image' height='300' width='500' />
           </div>
           <div>
             <Tooltip label="Github link" placement="right">

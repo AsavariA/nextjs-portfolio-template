@@ -1,3 +1,10 @@
+import INZA_1 from '../styles/projects/INZA_1.jpg';
+import BIZ_1 from '../styles/projects/BIZ_1.jpg';
+import AHORA_1 from '../styles/projects/AHORA_2.jpg';
+import PORTFOLIO_1 from '../styles/projects/PORTFOLIO_1.jpg';
+import NPM1 from '../styles/projects/NPM1.jpg';
+import TALK_1 from '../styles/projects/TALK_1.jpg';
+
 export const projects = [
     {
         name: 'INZA Design Co',
@@ -7,6 +14,7 @@ export const projects = [
         tech: ['HTML5', 'CSS3', 'VanillaJS'],
         borderRadius: '50px 0 0 0',
         justifyContent: 'flex-start',
+        photo: INZA_1,
         id: 1
     },
     {
@@ -17,6 +25,7 @@ export const projects = [
         tech: ['MERN Stack'],
         borderRadius: '0 0 50px 0',
         justifyContent: 'flex-end',
+        photo: BIZ_1,
         id: 2
     },
     {
@@ -27,6 +36,7 @@ export const projects = [
         tech: ['ReactJS', 'Firebase'],
         borderRadius: '50px 0 0 0',
         justifyContent: 'flex-start',
+        photo: AHORA_1,
         id: 3
     },
     {
@@ -37,6 +47,7 @@ export const projects = [
         tech: ['NextJs','Chakra UI'],
         borderRadius: '0 0 50px 0',
         justifyContent: 'flex-end',
+        photo: PORTFOLIO_1,
         id: 4
     },
     {
@@ -47,6 +58,7 @@ export const projects = [
         tech: ['NodeJS', 'Webpack'],
         borderRadius: '0 0 50px 0',
         justifyContent: 'flex-start',
+        photo: NPM1,
         id: 5
     },
     {
@@ -57,6 +69,7 @@ export const projects = [
         tech: ['ReactJS', 'Firebase'],
         borderRadius: '50px 0 0 0',
         justifyContent: 'flex-end',
+        photo: TALK_1,
         id: 6
     },
 

@@ -23,7 +23,7 @@ const Work = ({ currentTheme }) => {
                 {
                     projects.map((project) => {
                         return (
-                            <div key={project.id} data-aos="flip-up">
+                            <div key={project.id} data-aos='fade-up'>
                                 <WorkProject currentTheme={currentTheme} project={project} />
                             </div>
                         )

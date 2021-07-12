@@ -59,9 +59,7 @@
 }
 
 .cardbottom{
-    display: flex;
     width: 60vmin;
-    align-items: center;
 }
 
 .socialIcon{
@@ -81,15 +79,6 @@
 }
 
 .projdescription{
-    font-size: 14px;
-}
-
-.cta{
-    padding: 0.3rem 2rem;
-    border-radius: 50px;
-    border: 1px solid red;
-    margin-left: 0.5rem;
-    color: red;
     font-size: 14px;
 }
 
@@ -174,7 +163,7 @@
         display: block;
     }
     .card{
-        height: 45vmin;
+        height: 40.8333vmin;
         width: 70vmin;
     }
     .cardbottom{

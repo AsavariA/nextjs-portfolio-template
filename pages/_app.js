@@ -12,7 +12,11 @@ function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    setTheme(localStorage.getItem('theme'));
+    if (localStorage.getItem('theme')) {
+      setTheme(localStorage.getItem('theme'))
+    } else {
+      setTheme('light')
+    }
   }, [])
 
   useEffect(() => {

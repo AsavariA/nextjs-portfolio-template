@@ -24,7 +24,7 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
     })
 
     return (
-        <div className={styles.navbar} style={{ backgroundColor: currentTheme.secondary, boxShadow: currentTheme.boxShadow, padding: !drawerVisible ? '0.9rem 5rem 1.3rem 5rem' : '0.5rem', position: sticky ? 'fixed' : 'static' }}>
+        <div className={styles.navbar} style={{ backgroundColor: currentTheme.secondary, boxShadow: currentTheme.boxShadow, position: sticky ? 'fixed' : 'static' }}>
             <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'baseline', marginBottom: !drawerVisible ? '0' : '10px' }}>
                 <Link href='/'><a><h2 className={styles.logo}>Asavari Ambavane</h2></a></Link>
                 {!drawerVisible
