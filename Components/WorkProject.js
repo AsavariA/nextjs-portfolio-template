@@ -6,9 +6,11 @@ import { HStack, Tag, TagLabel, Tooltip } from "@chakra-ui/react"
 import { useToast } from "@chakra-ui/react"
 import { useState } from 'react';
 import Image from 'next/image';
+import { useSwipeable } from "react-swipeable";
 
 const WorkProject = ({ currentTheme, project }) => {
-  const toast = useToast()
+  const toast = useToast();
+  const [index, setIndex] = useState(0);
 
   const showGitToast = () => {
     toast({
@@ -26,30 +28,26 @@ const WorkProject = ({ currentTheme, project }) => {
     })
   }
 
-  // const ahead = () => {
-  //   if (index === 3) {
-  //     setIndex(1)
-  //     setClassname('project' + project.id + '_' + index)
-  //   } else {
-  //     setIndex(index + 1)
-  //     setClassname('project' + project.id + '_' + index)
-  //   }
-  // }
+  const ahead = () => {
+    if (index === 2) {
+      setIndex(0)
+    } else {
+      setIndex(index + 1)
+    }
+  }
 
-  // const back = () => {
-  //   if (index === 1) {
-  //     setIndex(3)
-  //     setClassname('project' + project.id + '_' + index)
-  //   } else {
-  //     setIndex(index - 1)
-  //     setClassname('project' + project.id + '_' + index)
-  //   }
-  // }
+  const back = () => {
+    if (index === 0) {
+      setIndex(2)
+    } else {
+      setIndex(index - 1)
+    }
+  }
 
-  // const handlers = useSwipeable({
-  //   onSwipedLeft: () => ahead(),
-  //   onSwipedRight: () => back()
-  // });
+  const handlers = useSwipeable({
+    onSwipedLeft: () => ahead(),
+    onSwipedRight: () => back()
+  });
 
   return (
     <div className={styles.parentofparentcard} style={{ justifyContent: project.justifyContent }} id={project.id}>
@@ -71,8 +69,10 @@ const WorkProject = ({ currentTheme, project }) => {
           </HStack>
         </div>
         <div className={styles.imageandsocials}>
-          <div className={styles.card} style={{ borderColor: currentTheme.footerColor }}>
-            <Image src={project.photo} alt='thumbnail image' height='300' width='500' />
+          <div className={styles.card} {...handlers} style={{ borderColor: currentTheme.footerColor, position: 'relative' }}>
+            <Image src={project.photo[index]} alt='thumbnail image' height='300' width='500' />
+            <button onClick={back} style={{position: 'absolute', top: '50%', left: '10px', color: 'white', fontSize: '20px'}}>&lt;</button>
+            <button onClick={ahead} style={{position: 'absolute', top: '50%', right: '10px', color: 'white', fontSize: '20px'}}>&gt;</button>
           </div>
           <div>
             <Tooltip label="Github link" placement="right">
