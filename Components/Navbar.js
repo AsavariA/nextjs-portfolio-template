@@ -4,6 +4,7 @@ import Navlinks from './Navlinks'
 import { useMediaQuery } from "@chakra-ui/react"
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { userinfo } from '../Constants/userinfo'
 
 const Navbar = ({ toggleTheme, currentTheme }) => {
     const [drawerVisible] = useMediaQuery("(max-width: 950px)")
@@ -26,7 +27,7 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
     return (
         <div className={styles.navbar} style={{ backgroundColor: currentTheme.secondary, boxShadow: currentTheme.boxShadow, position: sticky ? 'fixed' : 'static' }}>
             <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'baseline', marginBottom: !drawerVisible ? '0' : '10px' }}>
-                <Link href='/'><a><h2 className={styles.logo}>Asavari Ambavane</h2></a></Link>
+                <Link href='/'><a><h2 className={styles.logo}>{userinfo.logoText}</h2></a></Link>
                 {!drawerVisible
                     ? <div style={{ display: 'flex' }}>
                         <Navlinks />

@@ -1,12 +1,14 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { userinfo } from '../Constants/userinfo'
+import { SliderFilledTrack } from '@chakra-ui/react'
 
-const Skills = ({currentTheme}) => {
+const Skills = ({ currentTheme }) => {
     return (
         <>
             <h1 className={styles.workheading} data-aos="fade-up">Capabilities</h1>
             <div className={styles.skills} style={{ color: currentTheme.subtext }}>
-                <ul className={styles.skillList} data-aos="fade-up">
+                {/* <ul className={styles.skillList} data-aos="fade-up">
                     <h1 className={styles.skillHeading} style={{ color: currentTheme.text }}>Frontend</h1>
                     <h2>HTML5, CSS3, JS</h2>
                     <h2>React JS, Next JS</h2>
@@ -25,7 +27,29 @@ const Skills = ({currentTheme}) => {
                     <h1 className={styles.skillHeading} style={{ color: currentTheme.text }}>Database</h1>
                     <h2>Firebase</h2>
                     <h2>MongoDB</h2>
-                </ul>
+                </ul> */}
+
+                {userinfo.capabilities ?
+                    userinfo.capabilities.map((value, key1) => {
+                        return (
+                            <>
+                                <ul className={styles.skillList} data-aos="fade-up">
+                                    <h1 className={styles.skillHeading} style={{ color: currentTheme.text }}>{value.category}</h1>
+                                    {
+                                        value.skills ?
+                                            value.skills.map((skill, key2) => {
+                                                return (
+                                                    <h2 key={key2}>{skill}</h2>
+                                                )
+                                            }) : null
+                                    }
+                                </ul>
+                                {userinfo.capabilities.indexOf(value) === userinfo.capabilities.length - 1 ? null : <div className={styles.line} style={{ backgroundColor: currentTheme.subtext }} data-aos="fade-up"></div>}
+                            </>
+                        )
+                    }) : null
+                }
+
             </div>
             <div style={{ textAlign: 'center', padding: '1rem 0' }}><Link href="/contact"><a className={styles.cta3} style={{ background: 'transparent', border: `2px solid ${currentTheme.accent}` }}>Get in touch <span>&gt;</span></a></Link></div>
         </>

@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { ThemeProvider } from "styled-components"
 import { useState, useEffect } from "react"
-import { lightTheme, darkTheme, GlobalStyles } from "../ThemeConfig"
+import { lightTheme, darkTheme, GlobalStyles } from "../Constants/ThemeConfig"
 import Layout from '../Layout';
 import { ChakraProvider } from "@chakra-ui/react"
 import AOS from "aos";

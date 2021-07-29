@@ -1,7 +1,7 @@
 import styles from '../styles/Work.module.css'
 import WorkProject from './WorkProject'
 import BlogCard from './BlogCard';
-import { projects } from '../Collections/projects'
+import { projects } from '../Constants/projects'
 import { useState, useEffect } from 'react';
 import Carousel, { CarouselItem } from "./Carousel";
 
