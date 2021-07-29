@@ -5,7 +5,7 @@ import HeadTag from '../Components/HeadTag';
 const work = ({ currentTheme }) => {
     return (
         <>
-            <HeadTag />
+            <HeadTag page='Work'/>
             <div>
                 <Work currentTheme={currentTheme}/>
             </div>

@@ -6,7 +6,7 @@ export default function Home({ currentTheme }) {
 
   return (
     <div>
-      <HeadTag />
+      <HeadTag page='Home'/>
       <HomePage currentTheme={currentTheme} />
     </div>
   )

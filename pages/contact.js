@@ -7,7 +7,7 @@ const contact = ({ currentTheme }) => {
 
     return (
         <>
-            <HeadTag />
+            <HeadTag page='Contact'/>
             <div className={styles.contactFullDiv}>
                 <Contact currentTheme={currentTheme} />
             </div>

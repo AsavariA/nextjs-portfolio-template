@@ -29,7 +29,7 @@ const WorkProject = ({ currentTheme, project }) => {
   }
 
   const ahead = () => {
-    if (index === 2) {
+    if (index === project.photo.length-1) {
       setIndex(0)
     } else {
       setIndex(index + 1)
@@ -38,7 +38,7 @@ const WorkProject = ({ currentTheme, project }) => {
 
   const back = () => {
     if (index === 0) {
-      setIndex(2)
+      setIndex(project.photo.length-1)
     } else {
       setIndex(index - 1)
     }
