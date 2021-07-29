@@ -33,7 +33,7 @@ const HomePage = ({ currentTheme }) => {
                 <Skills currentTheme={currentTheme} />
             </div>
             <div>
-                <Education />
+                <Education currentTheme={currentTheme} />
             </div>
             <div id="about" className={styles.homeAboutSection} style={{ backgroundColor: currentTheme.secondary }}>
                 <h1 className={styles.workheading} data-aos="fade-up">{userinfo.about.title}</h1>
