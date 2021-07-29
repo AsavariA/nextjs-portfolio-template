@@ -17,11 +17,12 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url('background.webp');
+    background-image: url('https://images.squarespace-cdn.com/content/v1/598b971917bffc79a0d11a29/1607345327446-14UE5KE4VQKTP1QG3O0R/03.png?format=1500w');
+    /* background-image: url('background.webp'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100%;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .heading{
