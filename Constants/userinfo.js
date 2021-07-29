@@ -1,3 +1,5 @@
+import { faGithubAlt, faLinkedinIn, faMediumM, faFacebook, faTwitter, faInstagram, faYoutube, faBehance } from "@fortawesome/free-brands-svg-icons"
+
 export const userinfo = {
     logoText: "Asavari Ambavane",
     greeting: {
@@ -22,5 +24,26 @@ export const userinfo = {
             category: "Database",
             skills: ["Firebase", "MongoDB"]
         },
+    ],
+    contact: {
+        email: 'ambavaneasavari@gmail.com',
+        phone: '123456708',
+        countrycode: '+91'
+    },
+    mainSocials: [
+        { type: 'github', link: '', icon: faGithubAlt },
+        { type: 'linkedin', link: '', icon: faLinkedinIn },
+        { type: 'medium', link: '', icon: faMediumM },
+    ]
+    ,
+    allSocials: [
+        { type: 'instagram', link: '', icon: faInstagram },
+        { type: 'linkedin', link: '', icon: faLinkedinIn },
+        { type: 'github', link: '', icon: faGithubAlt },
+        { type: 'facebook', link: '', icon: faFacebook },
+        { type: 'twitter', link: '', icon: faTwitter },
+        { type: 'medium', link: '', icon: faMediumM },
+        { type: 'youtube', link: '', icon: faYoutube },
+        { type: 'behance', link: '', icon: faBehance },
     ]
 }

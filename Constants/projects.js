@@ -27,10 +27,7 @@ export const projects = [
         githubLink: '',
         projectLink: 'http://inzadesign.com/',
         tech: ['HTML5', 'CSS3', 'VanillaJS'],
-        borderRadius: '50px 0 0 0',
-        justifyContent: 'flex-start',
         photo: [INZA_1, INZA_2, INZA_3],
-        id: 1
     },
     {
         name: 'Place of Thoughts',
@@ -38,10 +35,7 @@ export const projects = [
         githubLink: 'https://github.com/AsavariA/place-of-thoughts',
         projectLink: 'https://placeofthoughts.netlify.app/',
         tech: ['MERN Stack'],
-        borderRadius: '0 0 50px 0',
-        justifyContent: 'flex-end',
         photo: [POT_1, POT_2, POT_3],
-        id: 2
     },
     {
         name: 'The Biz Project',
@@ -49,10 +43,7 @@ export const projects = [
         githubLink: 'https://github.com/AsavariA/the-bizness-project',
         projectLink: 'https://the-bizness-project.netlify.app/',
         tech: ['MERN Stack'],
-        borderRadius: '50px 0 0 0',
-        justifyContent: 'flex-start',
         photo: [BIZ_1, BIZ_2, BIZ_3],
-        id: 3
     },
     {
         name: 'Ahora Journal',
@@ -60,10 +51,7 @@ export const projects = [
         githubLink: 'https://github.com/AsavariA/ahora-journal-app',
         projectLink: 'https://journal-cc843.web.app/',
         tech: ['ReactJS', 'Firebase'],
-        borderRadius: '0 0 50px 0',
-        justifyContent: 'flex-end',
         photo: [AHORA_1, AHORA_2, AHORA_3],
-        id: 4
     },
     {
         name: 'Portfolio Website',
@@ -71,10 +59,7 @@ export const projects = [
         githubLink: 'https://github.com/AsavariA/next-website',
         projectLink: '/',
         tech: ['NextJs','Chakra UI'],
-        borderRadius: '50px 0 0 0',
-        justifyContent: 'flex-start',
         photo: [PORTFOLIO_1, PORTFOLIO_2, PORTFOLIO_3],
-        id: 5
     },
     {
         name: 'Navbar Package',
@@ -82,10 +67,7 @@ export const projects = [
         githubLink: 'https://github.com/AsavariA/npm-package-nav',
         projectLink: 'https://www.npmjs.com/package/responsive-sticky-nav',
         tech: ['NodeJS', 'Webpack'],
-        borderRadius: '0 0 50px 0',
-        justifyContent: 'flex-end',
         photo: [NPM1, NPM2, NPM3],
-        id: 6
     },
     {
         name: 'Talkative',
@@ -93,9 +75,6 @@ export const projects = [
         githubLink: 'https://github.com/AsavariA/talkative',
         projectLink: '',
         tech: ['ReactJS', 'Firebase'],
-        borderRadius: '50px 0 0 0',
-        justifyContent: 'flex-start',
         photo: [TALK_1, TALK_2, TALK_3],
-        id: 7
     },
 ]

@@ -1,15 +1,12 @@
 import { Stack, Input, Textarea, useToast } from "@chakra-ui/react"
-import { useMediaQuery } from "@chakra-ui/react"
 import { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubAlt, faLinkedinIn, faMediumM, } from "@fortawesome/free-brands-svg-icons"
 import Link from 'next/link'
+import { userinfo } from '../Constants/userinfo'
 
 const Contact = ({ currentTheme }) => {
-  const [drawerVisible] = useMediaQuery("(max-width: 850px)")
   const toast = useToast()
-  // const FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnXFxxj9KiFXRVRe1RweSbbrgouyzrQCxmdy3y7Kv5gOf3HA/formResponse'
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -44,9 +41,6 @@ const Contact = ({ currentTheme }) => {
       isClosable: true,
     })
 
-    // console.log(JSON.stringify(data))
-    // console.log(data)
-
     fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -68,11 +62,10 @@ const Contact = ({ currentTheme }) => {
   }
 
   return (
-    <div style={{ width: !drawerVisible ? '40%' : '80%', margin: !drawerVisible ? '0 auto' : '0 auto', padding: !drawerVisible ? '2rem' : '1rem 0.5rem' }}>
-      <div style={{ padding: !drawerVisible ? '1rem' : '0.5rem' }}>
+    <div className={styles.contactWrapper}>
+      <div className={styles.contactHeading}>
         <h2 className={styles.contact}>Contact Me</h2>
       </div>
-      {/* <form action={FORM_URL} method="POST"> */}
       <form onSubmit={(e) => { handleSubmit(e) }} className={styles.form} style={{ borderColor: currentTheme.text, backgroundColor: currentTheme.name === 'light' ? '#fafafa' : 'transparent' }}>
         <Stack spacing={4}>
           <Input type="text" name="name" value={name} placeholder="Your Name" focusBorderColor={currentTheme.tertiary} isRequired autoComplete="off" onChange={(e) => { setName(e.target.value) }} />
@@ -97,18 +90,21 @@ const Contact = ({ currentTheme }) => {
       </form>
 
       <div style={{ textAlign: 'center', paddingTop: '0.5rem' }}>
-        <Link href="mailto:ambavaneasavari@gmail.com"><a>ambavaneasavari@gmail.com</a></Link>
+        <Link href={`mailto:${userinfo.contact.email}`}><a>{userinfo.contact.email}</a></Link>
+      </div>
+      <div style={{ textAlign: 'center', paddingTop: '0.2rem', color: currentTheme.tertiary }}>
+        <Link href={`tel:${userinfo.contact.countrycode}${userinfo.contact.phone}`}><a>{`${userinfo.contact.countrycode} ${userinfo.contact.phone}`}</a></Link>
       </div>
       <div className={styles.socialIconDiv}>
-        <div className={styles.socialIcon} style={iconStyles}>
-          <Link href="https://github.com/AsavariA"><a><FontAwesomeIcon icon={faGithubAlt} /></a></Link>
-        </div>
-        <div className={styles.socialIcon} style={iconStyles}>
-          <Link href="https://www.linkedin.com/in/asavariambavane/"><a><FontAwesomeIcon icon={faLinkedinIn} /></a></Link>
-        </div>
-        <div className={styles.socialIcon} style={iconStyles}>
-          <Link href="https://ambavaneasavari.medium.com/"><a><FontAwesomeIcon icon={faMediumM} /></a></Link>
-        </div>
+        {userinfo.mainSocials ?
+          userinfo.mainSocials.map((social, key) => {
+            return (
+              <div className={styles.socialIcon} style={iconStyles} key={key}>
+                <Link href={social.link}><a><FontAwesomeIcon icon={social.icon} /></a></Link>
+              </div>
+            )
+          }) : null
+        }
       </div>
     </div>
   )

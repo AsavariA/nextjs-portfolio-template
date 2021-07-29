@@ -21,10 +21,10 @@ const Work = ({ currentTheme }) => {
             <div className={styles.workHeading}>Projects and Blogs</div>
             <div className={styles.workmain} style={{ color: currentTheme.subtext }}>
                 {
-                    projects.map((project) => {
+                    projects.map((project, key) => {
                         return (
-                            <div key={project.id} data-aos='fade-up'>
-                                <WorkProject currentTheme={currentTheme} project={project} />
+                            <div key={key} data-aos='fade-up'>
+                                <WorkProject currentTheme={currentTheme} project={project} id={key} />
                             </div>
                         )
                     })
@@ -33,7 +33,7 @@ const Work = ({ currentTheme }) => {
             <div style={{ backgroundColor: currentTheme.secondary }}>
                 {
                     blogList ? <Carousel currentTheme={currentTheme}>
-                        {blogList.map((blog, key) => {
+                        {blogList.slice(0,6).map((blog, key) => {
                             return (
                                 <CarouselItem key={key} currentTheme={currentTheme}>
                                     <BlogCard blog={blog} currentTheme={currentTheme} />

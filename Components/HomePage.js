@@ -18,10 +18,10 @@ const HomePage = ({ currentTheme }) => {
             <div className={styles.homeWorkSection} id="work">
                 <h1 className={styles.workheading} data-aos="fade-up">Work</h1>
                 {
-                    projects.slice(0, 3).map((project) => {
+                    projects.slice(0, 3).map((project, key) => {
                         return (
-                            <div key={project.id} data-aos="fade-up">
-                                <HomeProject currentTheme={currentTheme} project={project} />
+                            <div key={key} data-aos="fade-up">
+                                <HomeProject currentTheme={currentTheme} project={project} id={key}/>
                             </div>
                         )
                     })

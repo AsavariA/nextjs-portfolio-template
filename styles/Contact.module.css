@@ -6,6 +6,15 @@
     min-height: 90vh
 }
 
+.contactWrapper{
+  width: 40%;
+  padding: 2rem;
+}
+
+.contactHeading{
+  padding: 1rem;
+}
+
 .contact{
     font-family: 'Playfair Display', serif;
     text-align: center;

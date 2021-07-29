@@ -8,7 +8,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useSwipeable } from "react-swipeable";
 
-const WorkProject = ({ currentTheme, project }) => {
+const WorkProject = ({ currentTheme, project, id }) => {
   const toast = useToast();
   const [index, setIndex] = useState(0);
 
@@ -50,7 +50,7 @@ const WorkProject = ({ currentTheme, project }) => {
   });
 
   return (
-    <div className={styles.parentofparentcard} style={{ justifyContent: project.justifyContent }} id={project.id}>
+    <div className={styles.parentofparentcard} style={{ justifyContent: id % 2 === 0 ? 'flex-start' : 'flex-end' }}>
       <div className={styles.parentcard}>
         <div className={styles.cardtitle}>
           <h1 className={styles.projtitle}>{project.name}</h1>
