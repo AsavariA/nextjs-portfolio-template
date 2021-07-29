@@ -2,6 +2,7 @@ import styles from '../styles/Work.module.css'
 import WorkProject from './WorkProject'
 import BlogCard from './BlogCard';
 import { projects } from '../Constants/projects'
+import { custom_blogs } from '../Constants/blogs'
 import { useState, useEffect } from 'react';
 import Carousel, { CarouselItem } from "./Carousel";
 
@@ -9,12 +10,23 @@ const Work = ({ currentTheme }) => {
 
     const [blogList, setBlogList] = useState([])
 
+    // useEffect(() => {
+    //     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ambavaneasavari')
+    //         .then(response => response.json())
+    //         .then(data => setBlogList(data.items))
+    //         .catch(err => console.error(err));
+    // }, [])
+
     useEffect(() => {
-        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ambavaneasavari')
-            .then(response => response.json())
-            .then(data => setBlogList(data.items))
-            .catch(err => console.error(err));
+        setBlogList(custom_blogs)
     }, [])
+
+    // useEffect(() => {
+    //     fetch('https://dev.to/api/articles?username=olawanle_joel')
+    //         .then(response => response.json())
+    //         .then(data => console.log(data))
+    //         .catch(err => console.error(err));
+    // }, [])
 
     return (
         <div>
@@ -40,7 +52,7 @@ const Work = ({ currentTheme }) => {
                                 </CarouselItem>
                             )
                         })}
-                    </Carousel> : <p>Loading...</p>
+                    </Carousel> : null
                 }
             </div>
         </div>

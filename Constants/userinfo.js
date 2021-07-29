@@ -27,15 +27,14 @@ export const userinfo = {
     ],
     contact: {
         email: 'ambavaneasavari@gmail.com',
-        phone: '123456708',
+        phone: '0123456789',
         countrycode: '+91'
     },
     mainSocials: [
         { type: 'github', link: '', icon: faGithubAlt },
         { type: 'linkedin', link: '', icon: faLinkedinIn },
         { type: 'medium', link: '', icon: faMediumM },
-    ]
-    ,
+    ],
     allSocials: [
         { type: 'instagram', link: '', icon: faInstagram },
         { type: 'linkedin', link: '', icon: faLinkedinIn },

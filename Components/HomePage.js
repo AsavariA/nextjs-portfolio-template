@@ -6,6 +6,7 @@ import { projects } from '../Constants/projects'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import { userinfo } from '../Constants/userinfo'
+import Education from './Education'
 
 const HomePage = ({ currentTheme }) => {
     return (
@@ -30,6 +31,9 @@ const HomePage = ({ currentTheme }) => {
             </div>
             <div id="skills" className={styles.homeSkillSection} style={{ backgroundColor: currentTheme.secondary }}>
                 <Skills currentTheme={currentTheme} />
+            </div>
+            <div>
+                <Education />
             </div>
             <div id="about" className={styles.homeAboutSection} style={{ backgroundColor: currentTheme.secondary }}>
                 <h1 className={styles.workheading} data-aos="fade-up">{userinfo.about.title}</h1>
