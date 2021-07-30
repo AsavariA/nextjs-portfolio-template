@@ -22,7 +22,7 @@ const HomePage = ({ currentTheme }) => {
                     projects.slice(0, 3).map((project, key) => {
                         return (
                             <div key={key} data-aos="fade-up">
-                                <HomeProject currentTheme={currentTheme} project={project} id={key}/>
+                                <HomeProject currentTheme={currentTheme} project={project} id={key} />
                             </div>
                         )
                     })
@@ -33,7 +33,9 @@ const HomePage = ({ currentTheme }) => {
                 <Skills currentTheme={currentTheme} />
             </div>
             <div>
-                <Education currentTheme={currentTheme} />
+                {
+                    userinfo.education.visible ? <Education currentTheme={currentTheme} /> : null
+                }
             </div>
             <div id="about" className={styles.homeAboutSection} style={{ backgroundColor: currentTheme.secondary }}>
                 <h1 className={styles.workheading} data-aos="fade-up">{userinfo.about.title}</h1>

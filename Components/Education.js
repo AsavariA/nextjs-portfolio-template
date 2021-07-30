@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import { userinfo } from '../Constants/userinfo'
+import Link from 'next/link'
 
 const Education = ({ currentTheme }) => {
     return (
@@ -12,8 +13,8 @@ const Education = ({ currentTheme }) => {
             <div className={styles.timeline}>
                 <ul>
                     {
-                        userinfo.education ?
-                            userinfo.education.map((value, key) => {
+                        userinfo.education.educationList ?
+                            userinfo.education.educationList.map((value, key) => {
                                 return (
                                     <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" key={key}>
                                         <div className={styles.content}>
@@ -31,6 +32,8 @@ const Education = ({ currentTheme }) => {
                     <div style={{ clear: 'both' }}></div>
                 </ul>
             </div>
+
+            <div style={{ textAlign: 'center', paddingBottom: '2rem' }}><Link href="/#about"><a className={styles.cta3} style={{ background: 'transparent', border: `2px solid ${currentTheme.accent}` }}>About me <span>&gt;</span></a></Link></div>
 
         </div>
     )

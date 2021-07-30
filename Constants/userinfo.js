@@ -25,30 +25,33 @@ export const userinfo = {
             skills: ["Firebase", "MongoDB"]
         },
     ],
-    education: [
-        {
-            time: 'May - Oct 2020',
-            title: 'B.Tech in Electronics Engineering',
-            organization: 'VJTI, Mumbai',
-            description: 'Currently a sophomore at VJTI with a CGPA of 9.25'
-        },
-        {
-            time: 'May - Oct 2020',
-            title: 'B.Tech in Electronics Engineering',
-            organization: 'VJTI, Mumbai',
-            description: 'Currently a sophomore at VJTI with a CGPA of 9.25'
-        },
-        {
-            time: 'May - Oct 2020',
-            title: 'B.Tech in Electronics Engineering',
-            organization: 'VJTI, Mumbai',
-            description: 'Currently a sophomore at VJTI with a CGPA of 9.25'
-        },
-    ],
+    education: {
+        visible: false,
+        educationList: [
+            {
+                time: 'May - Oct 2020',
+                title: 'B.Tech in Electronics Engineering',
+                organization: 'VJTI, Mumbai',
+                description: 'Currently a sophomore at VJTI with a CGPA of 9.25'
+            },
+            {
+                time: 'May - Oct 2020',
+                title: 'B.Tech in Electronics Engineering',
+                organization: 'VJTI, Mumbai',
+                description: 'Currently a sophomore at VJTI with a CGPA of 9.25'
+            },
+            {
+                time: 'May - Oct 2020',
+                title: 'B.Tech in Electronics Engineering',
+                organization: 'VJTI, Mumbai',
+                description: 'Currently a sophomore at VJTI with a CGPA of 9.25'
+            },
+        ],
+    },
     contact: {
         email: 'ambavaneasavari@gmail.com',
-        phone: '0123456789',
-        countrycode: '+91'
+        phone: '',
+        countrycode: ''
     },
     mainSocials: [
         { type: 'github', link: 'https://github.com/AsavariA', icon: faGithubAlt },
