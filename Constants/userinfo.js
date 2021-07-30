@@ -51,9 +51,9 @@ export const userinfo = {
         countrycode: '+91'
     },
     mainSocials: [
-        { type: 'github', link: '', icon: faGithubAlt },
-        { type: 'linkedin', link: '', icon: faLinkedinIn },
-        { type: 'medium', link: '', icon: faMediumM },
+        { type: 'github', link: 'https://github.com/AsavariA', icon: faGithubAlt },
+        { type: 'linkedin', link: 'https://www.linkedin.com/in/asavariambavane/', icon: faLinkedinIn },
+        { type: 'medium', link: 'https://ambavaneasavari.medium.com/', icon: faMediumM },
     ],
     allSocials: [
         { type: 'instagram', link: '', icon: faInstagram },

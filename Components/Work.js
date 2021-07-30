@@ -2,7 +2,7 @@ import styles from '../styles/Work.module.css'
 import WorkProject from './WorkProject'
 import BlogCard from './BlogCard';
 import { projects } from '../Constants/projects'
-import { custom_blogs } from '../Constants/blogs'
+import { custom_blogs, medium_blogs, dev_to } from '../Constants/blogs'
 import { useState, useEffect } from 'react';
 import Carousel, { CarouselItem } from "./Carousel";
 
@@ -10,21 +10,24 @@ const Work = ({ currentTheme }) => {
 
     const [blogList, setBlogList] = useState([])
 
+    // CUSTOM BLOGS SUPPORT: UNCOMMENT THE FOLLOWING CODE FOR CUSTOM BLOGS
     // useEffect(() => {
-    //     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ambavaneasavari')
-    //         .then(response => response.json())
-    //         .then(data => setBlogList(data.items))
-    //         .catch(err => console.error(err));
+    //     setBlogList(custom_blogs)
     // }, [])
 
+    // MEDIUM BLOGS SUPPORT: UNCOMMENT THE FOLLOWING CODE FOR MEDIUM BLOGS
     useEffect(() => {
-        setBlogList(custom_blogs)
+        fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${medium_blogs.username}`)
+            .then(response => response.json())
+            .then(data => setBlogList(data.items))
+            .catch(err => console.error(err));
     }, [])
 
+    // DEV.TO BLOGS SUPPORT: UNCOMMENT THE FOLLOWING CODE FOR DEV.TO BLOGS
     // useEffect(() => {
-    //     fetch('https://dev.to/api/articles?username=olawanle_joel')
+    //     fetch(`https://dev.to/api/articles?username=${dev_to.username}`)
     //         .then(response => response.json())
-    //         .then(data => console.log(data))
+    //         .then(data => setBlogList(data))
     //         .catch(err => console.error(err));
     // }, [])
 

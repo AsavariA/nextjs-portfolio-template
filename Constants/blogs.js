@@ -28,3 +28,6 @@ export const custom_blogs = [
         categories: ['react', 'asa', 'nins']
     },
 ]
+
+export const medium_blogs = { username: 'ambavaneasavari'}
+export const dev_to = { username: 'ambavaneasavari'}
