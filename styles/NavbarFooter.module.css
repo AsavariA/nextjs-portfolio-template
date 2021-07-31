@@ -1,4 +1,4 @@
-.logo{
+.logo, .footerlogo{
     font-family: 'Playfair Display', serif;
     font-size: 30px;
   }
@@ -45,11 +45,65 @@
 .footermain{
   padding: 2rem;
   text-align: center;
-  color: grey;
 }
 
 .footercontent{
+  text-align: center;
   font-size: 16px;
+  margin-top: 2rem;
+}
+
+.footertable {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.footertable ul{
+  list-style: none;
+  text-align: left;
+}
+
+.footertable li{
+  font-size: 14px;
+  margin: 0.2rem 0;
+  text-transform: capitalize;
+}
+
+.footertable li:hover{
+  text-decoration: underline;
+}
+
+.listHeading{
+  font-weight: bold;
+  font-size: 16px !important;
+}
+
+.listHeading:hover{
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 550px){
+  .footerlogo{
+    font-size: 25px;
+  }
+  .footermain{
+    text-align: left;
+  }
+  .footertable {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  .footertable ul{
+    list-style: none;
+  }
+  .listHeading{
+    margin-top: 1.5rem !important;
+  }
 }
 
 @media only screen and (max-width: 950px){
@@ -70,11 +124,11 @@
 }
 
 @media only screen and (max-width: 380px){
-  .footermain{
-    padding: 2rem 1rem;
-  }
   .footercontent{
     font-size: 14px;
+  }
+  .footertable {
+    padding: 0;
   }
 }
 
