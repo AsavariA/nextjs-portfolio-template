@@ -7,7 +7,7 @@ export const userinfo = {
         phone: '',
         countrycode: ''
     },
-    mainSocials: [
+    socials: [
         { type: 'github', link: 'https://github.com/AsavariA', icon: faGithubAlt },
         { type: 'linkedin', link: 'https://www.linkedin.com/in/asavariambavane/', icon: faLinkedinIn },
         { type: 'medium', link: 'https://ambavaneasavari.medium.com/', icon: faMediumM },

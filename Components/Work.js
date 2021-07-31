@@ -4,6 +4,7 @@ import BlogCard from './BlogCard';
 import { projects } from '../Constants/projects'
 import { custom_blogs, medium_blogs, dev_to } from '../Constants/blogs'
 import { useState, useEffect } from 'react';
+import { headings } from '../Constants/userinfo'
 import Carousel, { CarouselItem } from "./Carousel";
 
 const Work = ({ currentTheme }) => {
@@ -33,7 +34,7 @@ const Work = ({ currentTheme }) => {
 
     return (
         <div>
-            <div className={styles.workHeading}>Projects and Blogs</div>
+            <div className={styles.workHeading}>{headings.workMainPage}</div>
             <div className={styles.workmain} style={{ color: currentTheme.subtext }}>
                 {
                     projects.map((project, key) => {

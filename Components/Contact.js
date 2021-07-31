@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from 'next/link'
-import { userinfo } from '../Constants/userinfo'
+import { userinfo, headings, ctaTexts } from '../Constants/userinfo'
 
 const Contact = ({ currentTheme }) => {
   const toast = useToast()
@@ -64,7 +64,7 @@ const Contact = ({ currentTheme }) => {
   return (
     <div className={styles.contactWrapper}>
       <div className={styles.contactHeading}>
-        <h2 className={styles.contact}>Contact Me</h2>
+        <h2 className={styles.contact}>{headings.contact}</h2>
       </div>
       <form onSubmit={(e) => { handleSubmit(e) }} className={styles.form} style={{ borderColor: currentTheme.text, backgroundColor: currentTheme.name === 'light' ? '#fafafa' : 'transparent' }}>
         <Stack spacing={4}>
@@ -83,7 +83,7 @@ const Contact = ({ currentTheme }) => {
           />
           <div>
             <div className={styles.submit} style={{ backgroundColor: currentTheme.tertiary }}>
-              <button type="submit">Submit</button>
+              <button type="submit">{ctaTexts.submitBTN}</button>
             </div>
           </div>
         </Stack>
@@ -99,8 +99,8 @@ const Contact = ({ currentTheme }) => {
           </div> : null
       }
       <div className={styles.socialIconDiv}>
-        {userinfo.mainSocials ?
-          userinfo.mainSocials.map((social, key) => {
+        {userinfo.socials ?
+          userinfo.socials.map((social, key) => {
             return (
               <div className={styles.socialIcon} style={iconStyles} key={key}>
                 <Link href={social.link}><a><FontAwesomeIcon icon={social.icon} /></a></Link>
