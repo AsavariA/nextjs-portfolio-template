@@ -48,21 +48,25 @@ const Work = ({ currentTheme }) => {
                 }
             </div>
             {
-                userinfo.experience.visible ? <Experiences currentTheme={currentTheme}/> : null
+                userinfo.experience.visible ? <Experiences currentTheme={currentTheme} /> : null
             }
-            <div style={{ backgroundColor: currentTheme.secondary }}>
-                {
-                    blogList ? <Carousel currentTheme={currentTheme}>
-                        {blogList.slice(0, 6).map((blog, key) => {
-                            return (
-                                <CarouselItem key={key} currentTheme={currentTheme}>
-                                    <BlogCard blog={blog} currentTheme={currentTheme} />
-                                </CarouselItem>
-                            )
-                        })}
-                    </Carousel> : null
-                }
-            </div>
+            {
+                userinfo.blogs.visible ?
+                    <div style={{ backgroundColor: currentTheme.secondary }}>
+                        {
+                            blogList ? <Carousel currentTheme={currentTheme}>
+                                {blogList.slice(0, 6).map((blog, key) => {
+                                    return (
+                                        <CarouselItem key={key} currentTheme={currentTheme}>
+                                            <BlogCard blog={blog} currentTheme={currentTheme} />
+                                        </CarouselItem>
+                                    )
+                                })}
+                            </Carousel> : null
+                        }
+                    </div> : null
+            }
+
         </div>
     )
 }

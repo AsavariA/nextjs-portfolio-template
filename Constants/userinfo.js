@@ -34,6 +34,7 @@ export const userinfo = {
             skills: ["Firebase", "MongoDB"]
         },
     ],
+    blogs: { visible: true },
     education: {
         visible: false,
         educationList: [
@@ -90,15 +91,17 @@ export const headings = {
     workMainPage: 'Projects and Blogs',
     capabilities: 'Capabilities',
     about: 'About Me',
+    education: 'Education',
     experience: 'Experiences',
     blogs: 'I write on Medium',
     contact: 'Contact Me',
 }
 
 export const ctaTexts = {
-    landingCTA : 'My work',
+    landingCTA: 'My work',
     workCTA: 'View All',
     capabCTA: 'Get in Touch',
+    educationCTA: 'About Me',
     resumeCTA: 'Resume',
     submitBTN: 'Submit'
 }

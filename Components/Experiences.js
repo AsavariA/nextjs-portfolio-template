@@ -6,13 +6,13 @@ import { userinfo, headings } from '../Constants/userinfo'
 const Experiences = ({ currentTheme }) => {
     return (
         <div className={styles.experienceWrapper}>
-            <h1 className={styles.workHeading}>{headings.experience}</h1>
-            <div className={styles.experienceCardWrapper}>
+            <h1 className={styles.workHeading} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">{headings.experience}</h1>
+            <div className={styles.experienceCardWrapper} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 {
                     userinfo.experience.experienceList ?
                     userinfo.experience.experienceList.map((exp, key) => {
                             return (
-                                <div className={styles.experienceCard} key={key}>
+                                <div className={styles.experienceCard} key={key} data-aos="fade-up">
                                     <Box borderWidth="1px" borderRadius="md" overflow="hidden">
                                         <div style={{ background: currentTheme.secondary, height: '150px' }}></div>
                                         <div className={styles.experienceCardContent}>

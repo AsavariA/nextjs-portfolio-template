@@ -15,12 +15,11 @@
 # production
 /build
 
-/styles/projects
-
 # misc
 .DS_Store
 *.pem
 /Collections/.env
+/my_own_portfolio_info
 
 # debug
 npm-debug.log*
