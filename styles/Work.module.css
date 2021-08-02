@@ -119,6 +119,65 @@
     text-decoration: underline;
   }
 
+  .experienceWrapper{
+    max-width: 75vw;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  .experienceCardWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 1rem;
+    place-items: center;
+    align-items: start;
+  } 
+  
+  .experienceCard{
+    margin: 0 1rem;
+    max-width: 400px;
+    transition: 0.2s ease-in;
+  }
+
+  .experienceCard:hover{
+    transform: scale(0.98);
+  }
+
+  .experienceCardContent{
+    padding: 0 1rem;
+    position: relative;
+    top: -100px;
+    text-align: center;
+  }
+
+  .experienceCardContent h1{
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .experienceCardContent h2{
+    font-size: 20px;
+  }
+
+  .experienceCardContent h3{
+    font-size: 14px;
+    padding: 0 2rem;
+    position: relative;
+    top: 10px;
+  }
+
+  .experienceCardContent h4{
+    font-size: 14px;
+    position: relative;
+    top: 60px;
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
 @media only screen and (max-width: 850px){
   .parentofparentcard{
     display: block;
@@ -178,4 +237,23 @@
         height: 2rem;
         width: 2rem;
     }
+
+    .experienceWrapper{
+      max-width: 90vw;
+      margin: auto;
+    }
+
+    .experienceCard{
+      margin: 0 0.5rem;
+    }
+
+    .experienceCardContent h3{
+      padding: 0 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+  .experienceCardWrapper{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  } 
 }

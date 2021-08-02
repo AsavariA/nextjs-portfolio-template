@@ -4,8 +4,9 @@ import BlogCard from './BlogCard';
 import { projects } from '../Constants/projects'
 import { custom_blogs, medium_blogs, dev_to } from '../Constants/blogs'
 import { useState, useEffect } from 'react';
-import { headings } from '../Constants/userinfo'
+import { headings, userinfo } from '../Constants/userinfo'
 import Carousel, { CarouselItem } from "./Carousel";
+import Experiences from './Experiences';
 
 const Work = ({ currentTheme }) => {
 
@@ -46,10 +47,13 @@ const Work = ({ currentTheme }) => {
                     })
                 }
             </div>
+            {
+                userinfo.experience.visible ? <Experiences currentTheme={currentTheme}/> : null
+            }
             <div style={{ backgroundColor: currentTheme.secondary }}>
                 {
                     blogList ? <Carousel currentTheme={currentTheme}>
-                        {blogList.slice(0,6).map((blog, key) => {
+                        {blogList.slice(0, 6).map((blog, key) => {
                             return (
                                 <CarouselItem key={key} currentTheme={currentTheme}>
                                     <BlogCard blog={blog} currentTheme={currentTheme} />

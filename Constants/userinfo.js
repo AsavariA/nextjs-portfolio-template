@@ -57,6 +57,32 @@ export const userinfo = {
             },
         ],
     },
+    experience: {
+        visible: false,
+        experienceList: [
+            {
+                company: 'VJTI, Mumbai',
+                companylogo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGjq6nmQlFz3lVCY6Rshn2fsHEHPGe5331w&usqp=CAU',
+                position: 'Web Developer',
+                time: 'March 2020 - May 2020',
+                description: 'Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.'
+            },
+            {
+                company: 'VJTI, Mumbai',
+                companylogo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGjq6nmQlFz3lVCY6Rshn2fsHEHPGe5331w&usqp=CAU',
+                position: 'Web Developer',
+                time: 'March 2020 - May 2020',
+                description: 'Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.'
+            },
+            {
+                company: 'VJTI, Mumbai',
+                companylogo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUGjq6nmQlFz3lVCY6Rshn2fsHEHPGe5331w&usqp=CAU',
+                position: 'Web Developer',
+                time: 'March 2020 - May 2020',
+                description: 'Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.'
+            },
+        ],
+    },
 }
 
 export const headings = {
@@ -64,8 +90,9 @@ export const headings = {
     workMainPage: 'Projects and Blogs',
     capabilities: 'Capabilities',
     about: 'About Me',
+    experience: 'Experiences',
     blogs: 'I write on Medium',
-    contact: 'Contact Me'
+    contact: 'Contact Me',
 }
 
 export const ctaTexts = {
