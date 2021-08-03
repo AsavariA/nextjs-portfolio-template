@@ -1,13 +1,13 @@
 // import project demo images as follows.
-import PROJECT1_1 from '../styles/projects/PROJECT1_1.jpg';
-import PROJECT1_2 from '../styles/projects/PROJECT1_2.jpg';
-import PROJECT1_3 from '../styles/projects/PROJECT1_3.jpg';
-import PROJECT2_1 from '../styles/projects/PROJECT2_1.jpg';
-import PROJECT2_2 from '../styles/projects/PROJECT2_2.jpg';
-import PROJECT2_3 from '../styles/projects/PROJECT2_3.jpg';
-import PROJECT3_1 from '../styles/projects/PROJECT3_1.jpg';
-import PROJECT3_2 from '../styles/projects/PROJECT3_2.jpg';
-import PROJECT3_3 from '../styles/projects/PROJECT3_3.jpg';
+import PROJECT1_1 from '../styles/projects/Project1_1.jpg';
+import PROJECT1_2 from '../styles/projects/Project1_2.jpg';
+import PROJECT1_3 from '../styles/projects/Project1_3.jpg';
+import PROJECT2_1 from '../styles/projects/Project2_1.jpg';
+import PROJECT2_2 from '../styles/projects/Project2_2.jpg';
+import PROJECT2_3 from '../styles/projects/Project2_3.jpg';
+import PROJECT3_1 from '../styles/projects/Project3_1.jpg';
+import PROJECT3_2 from '../styles/projects/Project3_2.jpg';
+import PROJECT3_3 from '../styles/projects/Project3_3.jpg';
 
 // first 3 projects are visible on the homepage while all are visible on the work page.
 
