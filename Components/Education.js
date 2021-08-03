@@ -16,7 +16,7 @@ const Education = ({ currentTheme }) => {
                         userinfo.education.educationList ?
                             userinfo.education.educationList.map((value, key) => {
                                 return (
-                                    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" key={key}>
+                                    <li data-aos="fade-up" key={key}>
                                         <div className={styles.content}>
                                             <h3 style={{ color: currentTheme.accent }}>{value.title}</h3>
                                             <p style={{ color: currentTheme.text }}>{value.organization}</p>

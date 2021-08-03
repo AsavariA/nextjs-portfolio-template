@@ -20,12 +20,10 @@ export default function (req, res) {
     html: `<p>Name: ${req.body.name}</p><p>Email: ${req.body.email}</p><p>Phone: ${req.body.phone}</p><p>Message: ${req.body.message}</p>`
   }
   transporter.sendMail(mailData, function (err, info) {
-    if(err)
-      {console.log('error')
-      console.log(err)}
+    if (err)
+      console.log('error')
     else
-     { console.log('info')
-      console.log(info)}
+      console.log('info')
   })
   res.status(200)
 }

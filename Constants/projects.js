@@ -1,80 +1,41 @@
-import INZA_1 from '../styles/projects/INZA_1.jpg';
-import INZA_2 from '../styles/projects/INZA_2.jpg';
-import INZA_3 from '../styles/projects/INZA_3.jpg';
-import BIZ_1 from '../styles/projects/BIZ_1.jpg';
-import BIZ_2 from '../styles/projects/BIZ_2.jpg';
-import BIZ_3 from '../styles/projects/BIZ_3.jpg';
-import AHORA_1 from '../styles/projects/AHORA_1.jpg';
-import AHORA_2 from '../styles/projects/AHORA_2.jpg';
-import AHORA_3 from '../styles/projects/AHORA_3.jpg';
-import PORTFOLIO_1 from '../styles/projects/PORTFOLIO_1.jpg';
-import PORTFOLIO_2 from '../styles/projects/PORTFOLIO_2.gif';
-import PORTFOLIO_3 from '../styles/projects/PORTFOLIO_3.jpg';
-import NPM1 from '../styles/projects/NPM1.jpg';
-import NPM2 from '../styles/projects/NPM2.gif';
-import NPM3 from '../styles/projects/NPM3.gif';
-import TALK_1 from '../styles/projects/TALK_1.jpg';
-import TALK_2 from '../styles/projects/TALK_2.jpg';
-import TALK_3 from '../styles/projects/TALK_3.jpg';
-import POT_1 from '../styles/projects/POT_1.jpg';
-import POT_2 from '../styles/projects/POT_2.jpg';
-import POT_3 from '../styles/projects/POT_3.jpg';
+// import project demo images as follows.
+import PROJECT1_1 from '../styles/projects/PROJECT1_1.jpg';
+import PROJECT1_2 from '../styles/projects/PROJECT1_2.jpg';
+import PROJECT1_3 from '../styles/projects/PROJECT1_3.jpg';
+import PROJECT2_1 from '../styles/projects/PROJECT2_1.jpg';
+import PROJECT2_2 from '../styles/projects/PROJECT2_2.jpg';
+import PROJECT2_3 from '../styles/projects/PROJECT2_3.jpg';
+import PROJECT3_1 from '../styles/projects/PROJECT3_1.jpg';
+import PROJECT3_2 from '../styles/projects/PROJECT3_2.jpg';
+import PROJECT3_3 from '../styles/projects/PROJECT3_3.jpg';
+
+// first 3 projects are visible on the homepage while all are visible on the work page.
 
 export const projects = [
+    //leave the githublink field blank if it is a private repo or doent exist, alerts will take care of it
+    //leave the projectlink field blank if it the project has not been deployed, alerts will take care of it
     {
-        name: 'INZA Design Co',
-        description: 'A Commercial Website for the branding agency, This website showcases beauty in minimalism. Seamless animations and pleasing color schemes truly brings about an aesthetic feel to it.',
-        githubLink: '',
-        projectLink: 'http://inzadesign.com/',
-        tech: ['HTML5', 'CSS3', 'VanillaJS'],
-        photo: [INZA_1, INZA_2, INZA_3],
+        name: 'Dunder Mifflin', //project name
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum', //project description
+        githubLink: '', //github repo link
+        projectLink: '', //deployed project link
+        tech: ['Tech1', 'Tech2', 'Tech3'], //techstack of the project, it is advisavble to mention only upto 3 technologies here to maintain the ui
+        photo: [PROJECT1_1, PROJECT1_2, PROJECT1_3], //list of names of images from above imports.
     },
     {
-        name: 'Place of Thoughts',
-        description: 'Blogging website. With an interface similar to Medium, this web app facilitates publishing your pieces and grouping them in categories. You can even save and comment on blogs you like!',
-        githubLink: 'https://github.com/AsavariA/place-of-thoughts',
-        projectLink: 'https://placeofthoughts.netlify.app/',
-        tech: ['MERN Stack'],
-        photo: [POT_1, POT_2, POT_3],
-    },
-    {
-        name: 'The Biz Project',
-        description: 'A place for all businesses. This full stack app becomes a treat for the users because of its features of creating, browsing without authentication and editing your businesses.',
-        githubLink: 'https://github.com/AsavariA/the-bizness-project',
-        projectLink: 'https://the-bizness-project.netlify.app/',
-        tech: ['MERN Stack'],
-        photo: [BIZ_1, BIZ_2, BIZ_3],
-    },
-    {
-        name: 'Ahora Journal',
-        description: 'The application helps the user maintain a personal record of daily happenings and reflections, plan the day and organize the tasks undertaken. It features various tools for boosting productivity.',
-        githubLink: 'https://github.com/AsavariA/ahora-journal-app',
-        projectLink: 'https://journal-cc843.web.app/',
-        tech: ['ReactJS', 'Firebase'],
-        photo: [AHORA_1, AHORA_2, AHORA_3],
-    },
-    {
-        name: 'Portfolio Website',
-        description: "My very own portfolio website! It showcases my work, abilities and other things about me. It's previous version also won the E-Portfolio competition at Technovanza 2021, VJTI.",
-        githubLink: 'https://github.com/AsavariA/next-website',
+        name: 'Project 2',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum',
+        githubLink: '/',
         projectLink: '/',
-        tech: ['NextJs','Chakra UI'],
-        photo: [PORTFOLIO_1, PORTFOLIO_2, PORTFOLIO_3],
+        tech: ['Tech1', 'Tech2', 'Tech3'],
+        photo: [PROJECT2_1, PROJECT2_2, PROJECT2_3],
     },
     {
-        name: 'Navbar Package',
-        description: 'An elegant responsive, sticky and customisable navbar package. This npm package is super easy to use! Import it in your project without any hassle and watch the magic as it happens!',
-        githubLink: 'https://github.com/AsavariA/npm-package-nav',
-        projectLink: 'https://www.npmjs.com/package/responsive-sticky-nav',
-        tech: ['NodeJS', 'Webpack'],
-        photo: [NPM1, NPM2, NPM3],
-    },
-    {
-        name: 'Talkative',
-        description: "Who doesn't love a good old chat application. With an intention of bringing a more modern feel to conventional chat apps, I tried my hand at an application called Talkative.",
-        githubLink: 'https://github.com/AsavariA/talkative',
-        projectLink: '',
-        tech: ['ReactJS', 'Firebase'],
-        photo: [TALK_1, TALK_2, TALK_3],
+        name: 'Project 3',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum',
+        githubLink: '/',
+        projectLink: '/',
+        tech: ['Tech1', 'Tech2', 'Tech3'],
+        photo: [PROJECT3_1, PROJECT3_2, PROJECT3_3],
     },
 ]
