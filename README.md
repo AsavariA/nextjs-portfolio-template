@@ -136,7 +136,7 @@ This instruction set is only applicable if blogs are set to visible. The blogs s
  9. Follow the steps from 4 - 8 but with DevTo details if your choice is DevTo blogs.
 
 ### Setting up Images
-There are only two images you need to set up externally. These images have to have a particular name and format. Location of these images is **root directory > styles**. Paste your images here.
+There are only 3 images you need to set up externally. These images have to have a particular name, format and location. 
 
 <ol>
     <li>
@@ -145,6 +145,7 @@ There are only two images you need to set up externally. These images have to ha
         <li>name - background</li>
         <li>type - .jpg</li>
         <li>filename - background.jpg</li>
+        <li>location - root > styles</li>
       </ul>
     </li>
     <li>
@@ -153,6 +154,16 @@ There are only two images you need to set up externally. These images have to ha
         <li>name - about</li>
         <li>type - .jpg</li>
         <li>filename - about.jpg</li>
+         <li>location - root > styles</li>
+      </ul>
+    </li>
+    <li>
+      Favicon Image
+      <ul>
+        <li>name - favicon</li>
+        <li>type - .jpg</li>
+        <li>filename - favicon.jpg</li>
+         <li>location - root > public</li>
       </ul>
     </li>
   </ol>
