@@ -44,6 +44,7 @@
         <li><a href="#setting-up-contact-form">Setting up Contact Form</a></li>
       </ul>
 	</li>
+	<li><a href="#deployment">Deployment</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
   </ol>
@@ -136,7 +137,7 @@ This instruction set is only applicable if blogs are set to visible. The blogs s
  9. Follow the steps from 4 - 8 but with DevTo details if your choice is DevTo blogs.
 
 ### Setting up Images
-There are only 3 images you need to set up externally. These images have to have a particular name, format and location. 
+There are only 3 images you need to set up externally. These images have to have a particular name and format and location. 
 
 <ol>
     <li>
@@ -174,14 +175,14 @@ You can change the colors as per your wish or leave the theme as it is. Make sur
 
 
 ### Setting up Contact Form
-For this step, you will need to create a **new google account** which will send you the form data. Need for a new account - well, it is advisable to use this new account only for this purpose so as to **prevent giving this template access** to your personal emails ( which are on your original email account ). 
+For this step, you will need to create a **new google account** which will send you the form data. Need for a new account - well, it is advisable to use this new account only for this purpose so as to **prevent giving this template access** to your personal emails ( which are on your original email account ). \
 
-Once you have made your account, make sure you have selected that account and go to [this link](https://myaccount.google.com/lesssecureapps). **Allow** the access.
+Once you have made your account, make sure you have selected that account and go to [this link](https://myaccount.google.com/lesssecureapps). **Allow** the access.\
 
-Now go to the **test.env** file. Rename this file to only **.env**
+Now go to the **test.env** file. Rename this file to only **.env**\
 *If your project is on github, please make sure to exclude this file from github ( put it in gitignore ) since it contains private / environmental variables.*
 
-  ```sh
+  ```
 //type in all data without the < and > signs.
 
   PASSWORD = <sender-mail-password> //password of newly created account
@@ -190,6 +191,17 @@ TO = <reciever-mail> //email address of your personal account (which will be rec
   ```
 
 **Contact form is now set up!**
+
+### Deployment
+To check if your website is running the way you wish, run the following command to start it locally on localhost:3000\
+`npm run dev`
+
+To deploy your portfolio, you can use any of the following ways.
+
+ - Vercel - this is the most advisable platform to deploy your nextjs applications because they are the building company and provide the best support for all nextjs websites.
+ - Netlify - Use the exclusive nextjs support on netlify to deploy your site.
+ 
+Both of these can be used directly through github and therefore any new changes and updates to your project repository will be updated immediately in the deployment. There are other ways and platforms to deploy your portfolio too.
 
 <!-- CONTRIBUTING -->
 ## Contributing
