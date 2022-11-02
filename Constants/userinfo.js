@@ -7,18 +7,19 @@ export const userinfo = {
     contact: {
         email: 'Bhathiyaprasad217@gmail.com', //It is always a good idea to mention your email on your website. Good platform to communicate.
         phone: '0704894572', //Phone number is optional, if you dont want it, consider leaving it blank .
-        countrycode: '+9a' //It is advisable to add the country code incase you mention your contact number.
+        countrycode: '+94' //It is advisable to add the country code incase you mention your contact number.
+        
     },
     socials: [
         //For aesthetics, it is advisable for you to mention upto 4 social media links only. Fill in the links.
         //more icons are imported above, use as you like them.
-        { type: 'github', link: '', icon: faGithubAlt },
-        { type: 'linkedin', link: '', icon: faLinkedinIn },
-        { type: 'medium', link: '', icon: faMediumM },
+        { type: 'github', link: 'https://github.com/BhathiyaPrasad', icon: faGithubAlt },
+        { type: 'Facebook', link: 'https://facebook.com/bhathiya.prasad.3', icon: faFacebook },
+        { type: 'Instagram', link: '', icon: faInstagram },
     ],
     greeting: {
         //this text goes on your landing page
-        title: "Hey there, I am Bhathiya.",
+        title: "Hey there, I am Bhathiya Prasad.",
         subtitle: "Beginner in Web development"
     },
     capabilities: [
